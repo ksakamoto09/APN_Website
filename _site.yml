@@ -1,6 +1,7 @@
 name: "cat-website"
+output_dir: "docs"
 navbar:
-  title: "My cats' website"
+  title: "APN"
   left:
     - text: "Home"
       href: index.html
@@ -9,4 +10,4 @@ navbar:
       href: http://github.com/<YOUR_GH_NAME>/
 output:
   html_document:
-    theme: darkly
+    theme: paper
