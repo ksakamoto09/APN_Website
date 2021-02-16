@@ -1,0 +1,29 @@
+---
+title: "APN Sustainable Cities"
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE )
+root <- rprojroot::find_rstudio_root_file()
+dataDir <- file.path(root, 'data')
+shapeDir <- file.path(root, 'shape')
+library(googlesheets4)
+library(dplyr)
+library(sf)
+library(stringr)
+library(lubridate)
+library(leaflet)
+library(htmltools)
+```
+
+## Introduction
+
+Here is some text about the summary of research.
+
+### Findings
+
+```{r, out.width="60%"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/8/8c/Microorganisms_and_climate_change.png")
+```
+
+Here is a random graphic.
+

@@ -5,9 +5,28 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-  right: 
-    - icon: fa-github fa-lg
-      href: http://github.com/<YOUR_GH_NAME>/
+    - text: "About"
+      href: summary.html
+    - text: "Cities"
+      menu:
+        - text: "Seoul"
+          href: seoul.html
+        - text: "Tokyo"
+          href: tokyo.html
+        - text: "Taipei"
+          href: taipei.html
+        - text: "Shanghai"
+          href: shanghai.html
+        - text: "Bangkok"
+          href: bangkok.html
+        - text: "New York City"
+          href: newYorkCity.html
+    - text: "News + Events"
+      href: press.html
 output:
   html_document:
     theme: paper
+    highlight: textmate
+    include:
+      after_body: footer.html
+    css: css/style.css

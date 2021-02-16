@@ -1,0 +1,86 @@
+blockquote {
+  font-style: italic
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+#footer {
+  position: relative;
+  z-index: 2;
+
+  box-sizing: border-box;
+  height: 91px;
+}
+
+#footer.band {
+
+  background-color: #85BC73;
+  padding: 30px 5%;
+
+  color: #fff;
+
+  font-weight: 300;
+  font-size: 12px;
+
+  line-height: 25px;
+}
+
+#footer .bandContent {
+  color: #fff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  line-height: 20px;
+}
+
+#footer .bandContent #copyright {
+  flex-shrink: 5;
+}
+
+#footer .bandContent #logos {
+  flex-shrink: 1;
+}
+
+#footer .bandContent .footerLogo {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center center;
+
+  margin: 0 8px;
+}
+
+#footer .bandContent #logos .footerLogo:last-child {
+  margin-right: 0px;
+}
+
+#footer .bandContent .footerLogo.twitter {
+  background-image: url(../images/twitterLogo.svg);
+}
+
+#footer .bandContent .footerLogo.gitHub {
+  background-image: url(../images/gitHubLogo2.svg);
+}
+
+#footer .bandContent .footerLogo.youtube {
+  background-image: url(../images/youtubeLogo.svg);
+}
+
+#footer .bandContent .footerLogo.facebook {
+  background-image: url(../images/facebookLogo.svg);
+}
+
+#footer .bandContent .footerLogo.slideshare {
+  background-image: url(../images/slideshareLogo.svg);
+}

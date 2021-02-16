@@ -1,7 +1,47 @@
 ---
-title: "My cats have a website!"
+title: "APN Sustainable Cities Research"
 ---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE )
+root <- rprojroot::find_rstudio_root_file()
+dataDir <- file.path(root, 'data')
+shapeDir <- file.path(root, 'shape')
+library(googlesheets4)
+library(dplyr)
+library(sf)
+library(stringr)
+library(lubridate)
+library(leaflet)
+```
 
-This is John.
 
-<img src="https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png" style="width:50%">
+Here is some text about the project and introduction.
+
+```{r}
+mainDF <- read_sheet("https://docs.google.com/spreadsheets/d/1kcZ6gZW1_okGLb1QscCwcjCAi4W3osO18D-uceZcJME/edit?usp=sharing",sheet = 1)
+```
+
+
+```{r}
+mainMapDF <- mainDF %>% 
+    filter(Role == "Researcher") %>% 
+    group_by(City, Country) %>% 
+    summarize(Lat = first(Lat),
+              Lon = first(Lon)) %>% 
+    st_as_sf(coords = c("Lon", "Lat"), crs = 4326)
+
+popup <- paste0( "Country: "
+                 , mainMapDF$Country 
+                 , "<br>"
+                 , "City: "
+                 , mainMapDF$City
+                 , "<br>",
+                 "<b><a href='",
+                 paste0(mainMapDF$City,".html"),
+                 "'>Research Page</a></b>"
+               )
+leaflet(mainMapDF) %>% 
+     addProviderTiles(providers$Esri.WorldImagery) %>% 
+    addMarkers(popup = ~popup)
+```
+

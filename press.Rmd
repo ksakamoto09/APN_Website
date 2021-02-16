@@ -1,0 +1,47 @@
+---
+title: "News and events"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE )
+library(htmltools)
+```
+
+<br>
+<br>
+
+<div class="row">
+<div class="column">
+```{r}
+
+    h1("News",
+    h3("Research workshop in Beijing on cities, energy use, and greenhouse gas emission"),
+    p("On November 15 and 16, 2018 Professor Peter Marcotullio, Director of the Institute for Sustainable Cities at Hunter College, and George Golub, MA Geography candidate, participated in a research workshop in Beijing, China for the project Tracking Influences of Asian Urban GHG Emissions for Sustainability Policies: Identifying Low Carbon Pathways to Meet the Paris Agreement. The meeting was supported by the Asia Pacific Network on Global Change Research (APN) and hosted by the Institute of Geographic Science and Natural Resources Research, Chinese Academy of Sciences. Workshop participants included researchers from Taipei, Taiwan; Tokyo, Japan; Beijing, China; Bangkok, Thailand; and New York City, USA. ")
+    )
+```
+</div>
+
+<div class="column">
+```{r, out.width="80%"}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/en/0/00/Logo_of_the_Asia-Pacific_Network_for_Global_Change_Research.png")
+```
+</div>
+</div>
+
+<div class="row">
+<div class="column">
+```{r}
+
+    h1("Events",
+    h3("City of Rising Waters"),
+    p("The Museum of the City of New York will be hosting a symposium to mark the five year anniversary of Superstorm Sandy, a watershed moment for New Yorkers’ awareness of the devastating impacts of climate change.  This afternoon program will examine how New York City can survive and embrace its future as a coastal city surrounded by rising waters.")
+    )
+```
+</div>
+
+<div class="column">
+```{r, out.width="80%"}
+knitr::include_graphics("https://i1.wp.com/www.cunysustainablecities.org/wp-content/uploads/2017/10/CityofRisingWaters_Square.jpg")
+```
+</div>
+</div>
