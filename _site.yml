@@ -6,21 +6,25 @@ navbar:
     - text: "Home"
       href: index.html
     - text: "About"
-      href: summary.html
+      menu:
+        - text: "Summary"
+          href: summary.html
+        - text: "Members"
+          href: members.html
     - text: "Cities"
       menu:
-        - text: "Seoul"
-          href: seoul.html
-        - text: "Tokyo"
-          href: tokyo.html
-        - text: "Taipei"
-          href: taipei.html
-        - text: "Shanghai"
-          href: shanghai.html
         - text: "Bangkok"
           href: bangkok.html
+        - text: "Beijing"
+          href: beijing.html
         - text: "New York City"
           href: newYorkCity.html
+        - text: "Seoul"
+          href: seoul.html
+        - text: "Taipei"
+          href: taipei.html
+        - text: "Tokyo"
+          href: tokyo.html
     - text: "News + Events"
       href: press.html
 output:

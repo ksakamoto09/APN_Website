@@ -37,7 +37,7 @@ popup <- paste0( "Country: "
                  , mainMapDF$City
                  , "<br>",
                  "<b><a href='",
-                 paste0(mainMapDF$City,".html"),
+                 paste0("docs/", stringr::str_to_lower(mainMapDF$City),".html"),
                  "'>Research Page</a></b>"
                )
 leaflet(mainMapDF) %>% 
