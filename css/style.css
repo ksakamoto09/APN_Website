@@ -84,3 +84,7 @@ blockquote {
 #footer .bandContent .footerLogo.slideshare {
   background-image: url(../images/slideshareLogo.svg);
 }
+
+#cityText {
+  margin: 0px 70px 0px 70px;
+}
