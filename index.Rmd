@@ -1,5 +1,8 @@
 ---
-title: "APN Sustainable Cities Research"
+title: " "
+output:
+  html_document:
+    toc_float: false
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE )
@@ -12,17 +15,21 @@ library(sf)
 library(stringr)
 library(lubridate)
 library(leaflet)
+library(shiny)
 ```
 
+```{r}
+h2(style = "text-align: center;", "APN Sustainable Cities Research")
+div(style = "text-align: center;", "Here is some text about the project and introduction.")
+```
 
-Here is some text about the project and introduction.
 
 ```{r}
 mainDF <- read_sheet("https://docs.google.com/spreadsheets/d/1kcZ6gZW1_okGLb1QscCwcjCAi4W3osO18D-uceZcJME/edit?usp=sharing",sheet = 1)
 ```
 
 
-```{r}
+```{r, fig.align='center'}
 mainMapDF <- mainDF %>% 
     filter(Role == "Researcher") %>% 
     group_by(City, Country) %>% 

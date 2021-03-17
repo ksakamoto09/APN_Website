@@ -10,6 +10,10 @@ blockquote {
   flex: 50%;
 }
 
+.html-widget {
+    margin: auto;
+}
+
 #footer {
   position: relative;
   z-index: 2;
@@ -87,4 +91,121 @@ blockquote {
 
 #cityText {
   margin: 0px 70px 0px 70px;
+}
+
+.band.full {
+  position: relative;
+}
+
+.band.full.first {
+  height: 550px;
+}
+
+.band.full.second {
+  height: 480px;
+
+  overflow: hidden;
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.band.full.third {
+  height: 520px;
+}
+
+.band.full.fourth {
+  height: 520px;
+  overflow: hidden;
+}
+
+.bandContent, .standardPadding .articleBandContent {
+  margin: 0 auto;
+  max-width: 1140px;
+  z-index: 2;
+}
+.band .imageOne {
+  position: absolute;
+  left: 0px;
+  bottom: -120px;
+  width: 630px;
+  height: auto;
+
+  z-index: 5;
+}
+
+.band .imageTwo {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  width: 45%;
+  height: auto;
+}
+
+.band .imageThree {
+  position: absolute;
+  left: 10px;
+  bottom: 0px;
+  width: 500px;
+  height: auto;
+
+  z-index: 5;
+}
+
+.band .imageFour {
+  position: absolute;
+  width: auto;
+  height: auto;
+  right: 0px;
+  bottom: 0px;
+  z-index:1;
+}
+.gallerySection, .formatSection {
+  margin-bottom: 2em;
+}
+
+.gallerySection .gallerySectionTitle, .formatSection .formatSectionTitle {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.formatSection .formatSectionTitle {
+  margin-bottom: 10px;
+}
+
+.gallerySection .galleryIntro {
+  margin-bottom: 10px;
+}
+
+.gallerySection .galleryItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.gallerySection .galleryItems .galleryItem {
+  width: 24%;
+
+  border: 1px solid #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.gallerySection .galleryItems .galleryItem:hover {
+
+}
+
+.gallerySection .galleryItems .galleryItem .galleryItemLabel {
+  display: block;
+  cursor: pointer;
+  border-top: 1px solid #f0f0f0;
+  padding: 10px 10px 5px 10px;
+}
+
+.gallerySection .galleryItems .galleryItem .galleryItemImage {
+  width: 100%;
+  height: auto;
+}
+
+.gallerySection .galleryItems .galleryItem .galleryItemDescription {
+  font-size: 12px;
+  padding: 0px 10px 10px 10px;
 }

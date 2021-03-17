@@ -1,3 +1,9 @@
+---
+title: " "
+output:
+  html_document:
+    toc_float: false
+---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE )
 root <- rprojroot::find_rstudio_root_file()
@@ -16,7 +22,7 @@ library(slickR)
 <br>
 **Taipei, Taiwan**  
 **Relationships between CO2 emissions and embodied energy in building construction: A historical analysis of Taipei**  
-*Po-Ju Huanga, Shu-Li Huanga, Peter J. Marcotullio*
+*Po-Ju Huang, Shu-Li Huang, Peter J. Marcotullio*
 <br>
 
 ```{r, out.width="80%", fig.align='center'}

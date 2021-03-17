@@ -1,0 +1,45 @@
+---
+title: "Publications"
+output:
+  html_document:
+    toc_float: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE )
+library(htmltools)
+```
+
+```{r}
+div(class="band full",
+    div(class="bandContent pageTitle", "Gallery"),
+    div(class="bandContent pageIntro", "Check out the range of outputs and formats you can create."),
+    div(class="bandContent gallerySection",
+        div(class="gallerySectionTitle", "Journal Papers"),
+        div(class="galleryIntro", "with R Markdown, you write a single .Rmd file"),
+        div(class="galleryItems",
+            div(class="galleryItem",
+                a(href="http://timelyportfolio.github.io/rCharts_nyt_home_price",
+                  img(class="galleryItemImage", src="https://d33wubrfki0l68.cloudfront.net/494157c0355607c35c71441a979de48935a4c8bb/46861/galleryimages/gallery-site-rmarkdown.png")),
+                a(href="http://timelyportfolio.github.io/rCharts_nyt_home_price",class="galleryItemImage", "HTML"),
+                div(class="galleryItemDescription", "HTML documents for web publishing.")),
+            div(class="galleryItem",
+                a(href="http://timelyportfolio.github.io/rCharts_nyt_home_price",
+                  img(class="galleryItemImage", src="https://d33wubrfki0l68.cloudfront.net/494157c0355607c35c71441a979de48935a4c8bb/46861/galleryimages/gallery-site-rmarkdown.png")),
+                a(href="http://timelyportfolio.github.io/rCharts_nyt_home_price",class="galleryItemImage", "HTML"),
+                div(class="galleryItemDescription", "HTML documents for web publishing.")),
+                        div(class="galleryItem",
+                a(href="http://timelyportfolio.github.io/rCharts_nyt_home_price",
+                  img(class="galleryItemImage", src="https://d33wubrfki0l68.cloudfront.net/494157c0355607c35c71441a979de48935a4c8bb/46861/galleryimages/gallery-site-rmarkdown.png")),
+                a(href="http://timelyportfolio.github.io/rCharts_nyt_home_price",class="galleryItemImage", "HTML"),
+                div(class="galleryItemDescription", "HTML documents for web publishing.")),
+                        div(class="galleryItem",
+                a(href="http://timelyportfolio.github.io/rCharts_nyt_home_price",
+                  img(class="galleryItemImage", src="https://d33wubrfki0l68.cloudfront.net/494157c0355607c35c71441a979de48935a4c8bb/46861/galleryimages/gallery-site-rmarkdown.png")),
+                a(href="http://timelyportfolio.github.io/rCharts_nyt_home_price",class="galleryItemImage", "HTML"),
+                div(class="galleryItemDescription", "HTML documents for web publishing."))
+        )
+    )
+)
+```
+
