@@ -19,8 +19,63 @@ library(shiny)
 ```
 
 ```{r}
-h2(style = "text-align: center;", "APN Sustainable Cities Research")
-div(style = "text-align: center;", "Here is some text about the project and introduction.")
+# h1(style = "text-align: center;", "APN Sustainable Cities Research")
+# div(style = "text-align: center;", 
+# h5(class = "subtitle", 
+# "Tracking Influences of Asian Urban GHG emissions for Sustainability Policies: Identifying
+# Low Carbon Pathways to meet the Paris Agreement")
+# ) 
+# hr()
+```
+<header class = "header-banner">
+<div class="header-banner--opacity" style="opacity: .8;"></div>
+<div  class="header-banner__cover"></div>
+<div class="header-banner__title">
+<p class = "title">APN Sustainable Cities Research<p>
+<p class = "subtitle">Tracking Influences of Asian Urban GHG emissions for Sustainability Policies: Identifying Low Carbon Pathways to meet the Paris Agreement</p>
+</div>
+<video width="100%" height="70%" autoplay muted loop>
+  <source src="https://upload.wikimedia.org/wikipedia/commons/8/85/%D0%9C%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%B8_%D0%B7%D0%B2%D0%B8%D1%87%D0%B0%D0%B9%D0%BD%D1%96.webm" type="video/webm">
+Your browser does not support the video tag.
+</video>
+</header>
+
+```{r}
+br()
+h3("Impetus")
+p(class = "blurb",
+"Over the past decades, Asia has undergone rapid urbanization. For
+example, from 1990 to 2010, the number of urban residents in Asia grew by over 800 million,
+increasing the Asian share of global urban population from 45 to 52%. This transformation has
+accompanied increased energy demand and subsequent greenhouse gas (GHG) emissions.")  
+```
+
+```{r}
+img(class="centered-and-cropped",style="border-radius:50%;",
+    src = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Seoul_botanic_park_05.jpg")
+```
+
+```{r}
+br()
+div(class = "break-container",
+img(class="break-image",style = "-webkit-transform: translate(0%,-70%);",
+    src = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Seoul_botanic_park_05.jpg")
+)
+```
+
+```{r}
+p(class = "blurb",
+"The recent Paris Agreement (2015) has drawn
+attention to the dramatic actions necessary to keep emissions low and therefore climate stable.
+Application of mitigation policies for low carbon societies are complicated, by the unique
+regional development conditions (socially, physically, economically and politically).")  
+
+p(class = "blurb",
+"This project explores urban case studies, through historical emissions analyses and their driving
+forces in select Asian citites. The case studies will examine the
+historical dynamics associated with regional urban development, energy use and GHG emissions 
+in the hopes of addressing appropriate regional policies in the Asian context.")
+br()
 ```
 
 
@@ -28,6 +83,19 @@ div(style = "text-align: center;", "Here is some text about the project and intr
 mainDF <- read_sheet("https://docs.google.com/spreadsheets/d/1kcZ6gZW1_okGLb1QscCwcjCAi4W3osO18D-uceZcJME/edit?usp=sharing",sheet = 1)
 ```
 
+```{r}
+h3("Map of Research Locations")
+```
+
+
+```{r}
+APNIcon <- makeIcon(
+  iconUrl = "images/APN-logo-1-300x103.png",
+  iconWidth = 50, iconHeight = 20,
+  iconAnchorX = 0, iconAnchorY = 0
+)
+APNpopup <- paste0(  "<b><a href='https://www.apn-gcr.org/'>APN Homepage</a></b>")
+```
 
 ```{r, fig.align='center'}
 mainMapDF <- mainDF %>% 
@@ -47,8 +115,13 @@ popup <- paste0( "Country: "
                  paste0(stringr::str_to_lower(mainMapDF$City),".html"),
                  "'>Research Page</a></b>"
                )
-leaflet(mainMapDF) %>% 
-     addProviderTiles(providers$Esri.WorldImagery) %>% 
-    addMarkers(popup = ~popup)
+
+leaflet(mainMapDF) %>%
+  addProviderTiles(providers$Esri.WorldImagery) %>%
+  addMarkers(popup = ~popup) %>%
+  addMarkers(lat = 34.69838, lng = 135.215418, icon = APNIcon,
+             popup = APNpopup)
+
 ```
+
 

@@ -20,13 +20,22 @@ library(htmltools)
 
 ## Introduction
 
-Here is some text about the summary of research.
+During the 2015 IPCC COP21 meeting, countries from around the world agreed that globally GHG emissions are rising rapidly with resulting warming that needs to be limited to a 1.5° C increase over pre-Industrial levels. Asian economies were among those leading the call (Coca, 2015).  Asian leadership may be because of the high environmental impact rapid development has brought to the region.  Among all regions Asia’s energy use and emissions have risen the most rapidly over the past few decades.  From 1990 to 2013, Asia’s cumulative share of total contributions of carbon from fossil fuel, cement manufacture and gas flaring emissions (historically) rose from 9.2% to over 19%, exceeding those of Western Europe of 14.4%, but not yet reaching the contributions of North America of 30%. (Boden et al, 2016).  To meet the goal of the agreement, urgent action is needed.   
+
+```{r}
+div(class="break-container",
+img(class="break-image",
+    src = "https://upload.wikimedia.org/wikipedia/commons/4/48/Field_of_Solar_Panels_near_Ogwell.jpg")
+)
+```
+
+Economic growth and urbanization are highly correlated with energy use and GHG emissions levels (for review see, Seto et al, 2014).  Asian economies that have experienced this growth are responding to mitigation needs (Coca, 2015).  While studies suggest that there is significant potential for cities to reduce global emissions (Creutzig, et al 2015), effective policies to control GHG emissions, require an understanding of the factors that induce energy use and subsequent GHG emissions at the finest geographic resolution possible (Gurney, et al 2015).  
+
+This project identifies the changes in energy use by source (residential, commercial, industrial and transportation) for sub-city scale areal units over time.  Socio-economic, political and institutional and biophysical factors (i.e., wealth/income, land use change, population, population density, fuel mix-carbon intensity, energy intensity, transit alternatives, policies, built environment, Heating and Cooling Degree Days, etc.,) help explain changes within each sub-city area and for the different case study city and metropolitan regions.   
+
 
 ### Findings
 
-```{r, out.width="60%"}
-knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/8/8c/Microorganisms_and_climate_change.png")
-```
 
-Here is a random graphic.
+More thoughts here...
 
