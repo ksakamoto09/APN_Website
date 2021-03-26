@@ -7,6 +7,10 @@ library(leaflet)
 library(htmltools)
 library(purrr)
 
+###########################
+##### Members Section #####
+###########################
+
 # this creates a section for each city
 cityBio <- function(city, ...){
     if(length(list(...))>4){
@@ -79,7 +83,7 @@ researchersDF <- mainDF %>%
     filter(Role == "Researcher")
 
 # get distinct cities
-cities <- researchersDF
+cities <- researchersDF %>% 
     distinct(City) %>% pull(City)
 
 
@@ -90,3 +94,35 @@ cities <- researchersDF
 # 
 # cities %>% map(~cityEach(.x, researchersDF)) %>%htmltools::tagList()
     
+    
+################################
+##### Publications Section #####
+################################
+
+# this creates a section for each publication Type
+pubType <- function(pub, pubDescription, ...){
+    if(length(list(...))>4){
+        stop("too many papers, has to be less than 4")
+    }
+
+    div(class="bandContent gallerySection",
+        div(class="gallerySectionTitle", pub),
+        div(class="galleryIntro", pubDescription),
+        div(class="galleryItems",
+            ...
+        )
+    )
+}
+
+# this creates a icon for each paper
+paperInfo <- function(link, paperImage, title, authors, summary){
+    div(class="galleryItem",
+        a(href=link,
+          img(class="galleryItemImage", src=paperImage)),
+        div(class="galleryItemDescription",
+            a(href=link,
+              p(title)),
+            strong(authors),
+            em(summary))
+        )
+}

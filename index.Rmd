@@ -51,8 +51,8 @@ accompanied increased energy demand and subsequent greenhouse gas (GHG) emission
 ```
 
 ```{r}
-img(class="centered-and-cropped",style="border-radius:50%;",
-    src = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Seoul_botanic_park_05.jpg")
+# img(class="centered-and-cropped",style="border-radius:50%;",
+#     src = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Seoul_botanic_park_05.jpg")
 ```
 
 ```{r}
@@ -61,6 +61,7 @@ div(class = "break-container",
 img(class="break-image",style = "-webkit-transform: translate(0%,-70%);",
     src = "https://upload.wikimedia.org/wikipedia/commons/b/b6/Seoul_botanic_park_05.jpg")
 )
+br()
 ```
 
 ```{r}
