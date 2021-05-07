@@ -3,6 +3,7 @@ title: "APN Sustainable Cities"
 output:
   html_document:
     toc_float: false
+    css: style.css
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE )

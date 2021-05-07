@@ -2,7 +2,7 @@
 title: " "
 output:
   html_document:
-    toc_float: false
+    toc: false
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE )
@@ -19,35 +19,42 @@ library(htmltools)
 library(slickR)
 ```
 
+
+
 <br>
-**Taipei, Taiwan**  
+```{r, out.width="100%", fig.align='center'}
+knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/e/e4/1_taipei_sunrise_panorama_dxr_edit_pangen_141215_1.jpg')
+```
+<br>
+
+<h2 style = text-align:center> About Taipei</h2>
+
+Taipei is the capital of Taiwan. Taipei City is an enclave of the municipality of New Taipei City
+sits about 25 km (16 mi) southwest of the northern port city of Keelung. Most of the city rests
+on the Taipei Basin, an ancient lakebed. The basin is bounded by the relatively narrow valleys of
+the Keelung and Xindian rivers, which join to form the Tamsui River along the city&#39;s western
+border. The population is estimated at 2,6 million in the core part of the Taipei–Keelung
+metropolitan area. Including the cities of New Taipei and Keelung bring the population to
+around 7 million. Roughly one-third of Taiwanese citizens live in the metro district. The name
+"Taipei"; can refer either to the whole metropolitan area or the city proper.  
+
+Taipei is the political, economic, educational and cultural center of Taiwan and one of the major
+hubs in East Asia. Taipei is part of a major high-tech industrial area. Railways, highways, airports
+and bus lines connect Taipei with all parts of the island. Connections go further as Taipei is also
+considered a global city and one of the most important economic centers in Asia.
+
+<h2 style = text-align:center> Taipei Research Paper </h2>
+
+<br>
 **Relationships between CO2 emissions and embodied energy in building construction: A historical analysis of Taipei**  
 *Po-Ju Huang, Shu-Li Huang, Peter J. Marcotullio*
 <br>
 
-```{r, out.width="80%", fig.align='center'}
-knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/e/e4/1_taipei_sunrise_panorama_dxr_edit_pangen_141215_1.jpg')
-```
 
-*Abstract*
-
-<div id = "cityText">
-Urban form is one of the key strategies the IPCC AR5 emphasized in attempting to mitigate greenhouse gases in
-urban areas. Although there is an abundance of research exploring the relationship linking the elements of urban
-form, energy consumption, and CO2 emissions on an urban level, little is known in regards to their relationships
-at the sub-city level. In addition, the energy consumed and the associated CO2 emissions during the construction
-of buildings in urban areas have seldom been assessed. To address these two research areas, this paper uses
-energy synthesis to evaluate embodied energy storage of different building types according to construction
-methods and development intensity and assesses the resources consumed and CO2 emissions during construction
-processes across urban space. With the city of Taipei as a case study, five building types were classified according
-to building materials and stories. The spatial distribution of energy storage embodied in the urban form of
-Taipei indicates that neighborhoods with higher energy storage and building CO2 emission are dominated by six
-to twelve stories reinforced concrete (RC) buildings. In contrast, the neighborhoods of low urban development
-dominated by brick buildings and one to five stories reinforced concrete buildings have lower energy storage in
-buildings and building CO2 emission. The results of the spatial distribution of energy storage and building CO2
-emission are used to discuss the relationship of the intensity distribution ratio, the building types, the daily
-consumption of CO2, and the effects of urban spatial planning.
-</div>
+There are 12 administrative districts in Taipei City and 456 neighborhood units. This paper divided the 12 administrative districts into northern, southern, eastern, western, and northeastern sections.  
+<Map>
+ 
+Development trends in Taipei City can be generalized from west to east and from edge to center. There are four distinct periods of development in Taipei pre-war as a Japanese colony, post war Chiang Kai-shek period, 1970s zoning regulations with economic development activity, and 1990s flood mitigation and straightening project of Keelung River and spurring of high-density development.  
 
 ```{r}
 taipeiImages <- tibble(name = c("Gate_of_Great_Centrality_and_Perfect_Uprightness",
@@ -62,3 +69,21 @@ slickR(
     width = '95%')+ 
   settings(dots = TRUE)
 ```
+ 
+Research on urban greenhouse gas emissions have been conducted at the city-scale, but sub-city units such as administrative districts, wards, boroughs or smaller units like neighborhoods or blocks have not been widely conducted. Analysis that includes smaller units have the potential of revealing important features within the urban landscape on the GHG emissions of urban centers.  
+ 
+In Taipei previous research conducted looked at land uses on energy consumption and CO2 emissions. This type of analysis left out the vertical aspect of the built environment when making their calculations which are important factors in dense urban centers.  
+ 
+Another issue is that the relationship between building construction and energy consumption has been conducted at the building level, but not a urban scale. These analyses are data intensive requiring information on various building materials across multiple building typologies.  
+ 
+For the analysis, buildings had to be categorized into different various types in accordance with the urban development context of Taipei. Then an embodied energy calculation is conducted. Then these are spatially mapped.  
+
+Emergy synthesis establishes a common energy unit called the solar emjoule to measure different types of energy and materials and used in this study to conduct environmental accounting of the inputs and materials flows in the construction of buildings. The energy system diagram is the starting point for emergy synthesis representing all inflows of energy and materials and their changes through the system. The diagram categorizes the materials needed for construction into: foundation,  structure, building envelope, and interior walls with energy and labor to account for the material and energy inflows.  
+ 
+The unit of measure for the embodied energy is the solar emergy unit (sej) and can be converted through the Unit Emergy Value (UEV). The energy flows are broken into renewable and non-renewable flows which is aggregated into the emergy density per square meter. Then the variables used in the emergy synthesis can be used to calculate the CO2 emissions from building material production and transportation through a table of figures from the Architecture and Building Research Institute of Taiwan's Ministry of the Interior (MOCA)  
+ 
+Higher emergy densities correlated with higher building-CO3 emissions, especially between building materials and the construction technology. The taller the building, the deeper the foundation needs to be which increases CO2 emissions during construction. There is also a negative correlation between interior wall compartments and increases in the number of floors on CO2 emissions. Building CO2 and Emergy Density were highly correlated as well as the building-CO2 and the daily consumption of CO2 density.  
+  
+Older brick buildings emit less CO2, and the reuse of existing buildings stock can help mitigate CO2 emissions from newer construction. The relationship between building-CO2 and daily CO2 consumption can be studied further to understand the causal relationship between people, embodied, energy of buildings, energy consumption and CO2 emissions.  
+
+
