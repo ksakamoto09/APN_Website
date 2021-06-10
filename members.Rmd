@@ -26,8 +26,3 @@ source("helperFunctions.R")
 cities %>% map(~cityEach(.x, researchersDF)) %>% tagList()
 
 ```
-
-## example
-- Bio
-- Project
-- Contact Info
