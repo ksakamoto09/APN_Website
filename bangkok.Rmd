@@ -1,29 +1,23 @@
 ---
-title: "Bangkok"
+title: "&nbsp;"
 output:
   html_document:
-    toc_float: false
+    toc: true
+    toc_float: true
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE )
-root <- rprojroot::find_rstudio_root_file()
-dataDir <- file.path(root, 'data')
-shapeDir <- file.path(root, 'shape')
-library(googlesheets4)
-library(dplyr)
-library(sf)
-library(stringr)
-library(lubridate)
-library(leaflet)
-library(htmltools)
+## read in libraries
+source("libraries.R")
 ```
 
-```{r}
-div(class="band",
-    div(
-        img(src='https://upload.wikimedia.org/wikipedia/commons/f/f6/Bangkok_skytrain_sunset.jpg', align = "right"),
-        h3("Bangkok")
-        )
-    )
+```{r bangkokMainImage, out.width="100%", fig.align='center'}
+## Main image for Bangkok page
+knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/f/f6/Bangkok_skytrain_sunset.jpg')
 ```
+
+<br>
+
+<h2 style = text-align:center> Bangkok Research Paper </h2>
+
 

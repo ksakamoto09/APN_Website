@@ -173,3 +173,10 @@ h1,h2,h3,h4,h5,h6,p  {font-family: "Lato", sans-serif;
 .lightbox{
   display:none;
 }
+
+.list-group-item.active, .list-group-item.active:hover {
+    z-index: 2;
+    color: #ffffff;
+    background-color: #85bc7385;
+    border-color: #2196f3;
+}

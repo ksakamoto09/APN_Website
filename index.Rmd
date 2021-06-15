@@ -1,39 +1,38 @@
 ---
-title: " "
+title: "&nbsp;"
 output:
   html_document:
     toc_float: false
     css: css/style.css
 ---
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE )
-root <- rprojroot::find_rstudio_root_file()
-dataDir <- file.path(root, 'data')
-shapeDir <- file.path(root, 'shape')
-library(googlesheets4)
-library(dplyr)
-library(sf)
-library(stringr)
-library(lubridate)
-library(leaflet)
-library(shiny)
+
+## read in libraries
+source("libraries.R")
+## read in data
+source("data.R")
 ```
 
+<!-- this section has the video for the home page -->
 <br>
 <div class="videoContainer">
-   <div class="overlay">
-   <div class="overlay-text">
-   <h1> APN Sustainable Cities Research</h2>
-<h4>Tracking Influences of Asian Urban GHG emissions for Sustainability Policies: Identifying Low Carbon Pathways to meet the Paris Agreement</h5>
+<div class="overlay">
+<div class="overlay-text">
+<h1> APN Sustainable Cities Research</h2>
+<h4>Tracking Influences of Asian Urban GHG emissions 
+for Sustainability Policies: Identifying Low Carbon Pathways 
+to meet the Paris Agreement</h5>
 </div>
 </div>
 <video autoplay muted loop>
-  <source src="images/index_assets/construction.webm" type="video/webm">
+<source src="images/index_assets/construction.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
 </div>
 
-```{r}
+```{r grantBlurb}
 br()
 h3("About the Grant", style = "text-align:center")
 p(class = "blurb",
@@ -41,7 +40,7 @@ p(class = "blurb",
 
 ```
 
-```{r}
+```{r breakImage}
 # 5472px x 400px for image size
 br()
 div(class="image-overlay",
@@ -50,7 +49,7 @@ img(src = "images/index_assets/index_break.png")
 br()
 ```
 
-```{r}
+```{r iscBlurb}
 br()
 h3("About the ISC", style = "text-align:center")
 p(class = "blurb",
@@ -61,7 +60,7 @@ p(class = "blurb",
 ")  
 ```
 
-```{r}
+```{r breakImage2}
 # 5472px x 400px for image size
 br()
 div(class="image-overlay",
@@ -70,7 +69,7 @@ img(src = "images/index_assets/index_break.png")
 br()
 ```
 
-```{r}
+```{r apnBlurb}
 h3("About the APN", style = "text-align:center")
 p(class = "blurb",
 a("(APN )", "https://www.apn-gcr.org") ,
@@ -83,15 +82,11 @@ strategies and measures, effective linkages between science and policy, and scie
 
 
 ```{r}
-mainDF <- read_sheet("https://docs.google.com/spreadsheets/d/1kcZ6gZW1_okGLb1QscCwcjCAi4W3osO18D-uceZcJME/edit?usp=sharing",sheet = 1)
-```
-
-```{r}
 h3("Map of Research Locations")
 ```
 
 
-```{r}
+```{r iconMaking}
 APNIcon <- makeIcon(
   iconUrl = "images/APN-logo-1-300x103.png",
   iconWidth = 50, iconHeight = 20,
@@ -100,14 +95,15 @@ APNIcon <- makeIcon(
 APNpopup <- paste0(  "<b><a href='https://www.apn-gcr.org/'>APN Homepage</a></b>")
 ```
 
-```{r, fig.align='center'}
+```{r leafletMap, fig.align='center'}
+# Here is where the mainDF is filtered and turned into an sf object
 mainMapDF <- mainDF %>% 
     filter(Role == "Researcher") %>% 
     group_by(City, Country) %>% 
     summarize(Lat = first(Lat),
               Lon = first(Lon)) %>% 
     st_as_sf(coords = c("Lon", "Lat"), crs = 4326)
-
+## popups are created
 popup <- paste0( "Country: "
                  , mainMapDF$Country 
                  , "<br>"
@@ -118,7 +114,7 @@ popup <- paste0( "Country: "
                  paste0(stringr::str_to_lower(mainMapDF$City),".html"),
                  "'>Research Page</a></b>"
                )
-
+## actual map with the`mainMapDF`
 leaflet(mainMapDF) %>%
   addProviderTiles(providers$Esri.WorldImagery) %>%
   addMarkers(popup = ~popup) %>%

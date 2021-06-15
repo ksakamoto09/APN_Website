@@ -1,17 +1,12 @@
-library(googlesheets4)
-library(dplyr)
-library(sf)
-library(stringr)
-library(lubridate)
-library(leaflet)
-library(htmltools)
-library(purrr)
+
 
 ###########################
 ##### Members Section #####
 ###########################
 
 # this creates a section for each city
+# takes in a city and creates it's own row
+# needs to be less than 4
 cityBio <- function(city, ...){
     if(length(list(...))>4){
         stop("too many members, has to be less than 4")
@@ -24,8 +19,11 @@ cityBio <- function(city, ...){
     )
 }
 
-# this creates a bio for each member
-memberBio <- function(first, last, authorURL, bioImage, program, programURl, university,universityURL, city, country, email, bio){
+## this creates a bio div for each member
+## takes variables such as first name, last name, etc..
+## returns html of a bio section
+memberBio <- function(first, last, authorURL, bioImage, program, programURl, 
+                      university,universityURL, city, country, email, bio){
     name <- paste(first, last)
     siteURL <- paste0(stringr::str_to_lower(city),".html")
     location <- paste0(city, ", ", country)
@@ -55,7 +53,9 @@ memberBio <- function(first, last, authorURL, bioImage, program, programURl, uni
                   p(bio)))))
 }
 
-## map through researchers per city
+## function to map through each researcher per city
+## searches for email in the main data frame from google sheets
+## and uses the `memberBio` function return html
 memberEach <- function(emails, df){
     subset <- df %>% 
         filter(Email == emails)
@@ -73,7 +73,8 @@ memberEach <- function(emails, df){
               subset$bio)
 }
 
-# for each city map each member in each city 
+# function to map each city map and it's members
+# takes in city and  main df, returns html of city and members
 cityEach <- function(city, df){
     emails <- df %>% 
         filter(City == city) %>% 
@@ -82,25 +83,6 @@ cityEach <- function(city, df){
     cityBio(city, emails %>%  map(~memberEach(.x, df)))
 }
 
-## Read in data
-mainDF <- read_sheet("https://docs.google.com/spreadsheets/d/1OhUJk2CZ2dn0_37nf98lZQaDyviFr0jf6oShuy6oaiI/edit?usp=sharing",sheet = 1)
-
-# subset researchers
-researchersDF <- mainDF %>% 
-    filter(Role == "Researcher")
-
-# get distinct cities
-cities <- researchersDF %>% 
-    distinct(City) %>% pull(City)
-
-
-## map through cities
-#cities %>% map(~cityEach(.x, researchersDF))
-# researchersDF$Email %>% map(~memberEach(.x, researchersDF))
-# 
-# 
-# cities %>% map(~cityEach(.x, researchersDF)) %>%htmltools::tagList()
-    
     
 ################################
 ##### Publications Section #####
@@ -122,6 +104,7 @@ pubType <- function(pub, pubDescription, ...){
 }
 
 # this creates a icon for each paper
+# with a description
 paperInfo <- function(link, paperImage, title, authors, summary){
     div(class="galleryItem",
         a(href=link,

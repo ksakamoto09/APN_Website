@@ -1,2 +1,3 @@
 # APN_Website
-APN website for ISC
+This is an Asian Pacific Network grant funded 
+research page created by the Institute for Sustainable Cities.

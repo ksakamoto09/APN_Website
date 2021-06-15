@@ -1,40 +1,24 @@
 ---
-title: " "
+title: "&nbsp;"
 output:
   html_document:
     toc: true
     toc_float: true
 ---
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE )
-root <- rprojroot::find_rstudio_root_file()
-dataDir <- file.path(root, 'data')
-shapeDir <- file.path(root, 'shape')
-library(googlesheets4)
-library(dplyr)
-library(sf)
-library(stringr)
-library(lubridate)
-library(leaflet)
-library(htmltools)
-library(slickR)
+
+## read in libraries
+source("libraries.R")
 ```
 
-<style>
 
-.list-group-item.active, .list-group-item.active:hover {
-    z-index: 2;
-    color: #ffffff;
-    background-color: purple;
-    border-color: #2196f3;
-}
-
-</style>
-
-<br>
-```{r, out.width="100%", fig.align='center'}
+```{r taipeiMainImage, out.width="100%", fig.align='center'}
+## adding main image for taipei page
 knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/e/e4/1_taipei_sunrise_panorama_dxr_edit_pangen_141215_1.jpg')
 ```
+
 <br>
 
 <h2 style = text-align:center> About Taipei</h2>
@@ -60,22 +44,25 @@ considered a global city and one of the most important economic centers in Asia.
 *Po-Ju Huang, Shu-Li Huang, Peter J. Marcotullio*
 <br>
 
-
 There are 12 administrative districts in Taipei City and 456 neighborhood units. This paper divided the 12 administrative districts into northern, southern, eastern, western, and northeastern sections.  
 <Map>
  
 Development trends in Taipei City can be generalized from west to east and from edge to center. There are four distinct periods of development in Taipei pre-war as a Japanese colony, post war Chiang Kai-shek period, 1970s zoning regulations with economic development activity, and 1990s flood mitigation and straightening project of Keelung River and spurring of high-density development.  
 
-```{r}
+```{r taipeiCarousel}
+# this creates the  image carousel
+# name is for the caption which takes in a vector
+# uri is the location of the images
 taipeiImages <- tibble(name = c("Fig. 1. The analytic framework of this research.",
                                 "Fig. 2. Emergy system diagram of building construction.",
                                 "Fig. 3. The spatial distribution of five buildings types in Taipei."),
                        uri = c("images/taipei/taipei_fig1.png",
                                "images/taipei/taipei_fig2.png",
                                "images/taipei/taipei_fig3.png"))
-slickR(
-    taipeiImages$uri)%synch%
-( slickR(taipeiImages$name, slideType = 'p') + settings(arrows = FALSE) )+ 
+
+# slickR takes the tibble and creates an image carousel
+slickR(taipeiImages$uri) %synch%
+  (slickR(taipeiImages$name, slideType = 'p') + settings(arrows = FALSE)) + 
   settings(dots = TRUE) 
 ```
 
@@ -83,6 +70,7 @@ slickR(
 <br>
 <br>
 <br>
+
 Research on urban greenhouse gas emissions have been conducted at the city-scale, but sub-city units such as administrative districts, wards, boroughs or smaller units like neighborhoods or blocks have not been widely conducted. Analysis that includes smaller units have the potential of revealing important features within the urban landscape on the GHG emissions of urban centers.  
  
 In Taipei previous research conducted looked at land uses on energy consumption and CO2 emissions. This type of analysis left out the vertical aspect of the built environment when making their calculations which are important factors in dense urban centers.  

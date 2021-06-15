@@ -1,29 +1,22 @@
 ---
-title: "Seoul"
+title: "&nbsp;"
 output:
   html_document:
-    toc_float: false
+    toc: true
+    toc_float: true
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE )
-root <- rprojroot::find_rstudio_root_file()
-dataDir <- file.path(root, 'data')
-shapeDir <- file.path(root, 'shape')
-library(googlesheets4)
-library(dplyr)
-library(sf)
-library(stringr)
-library(lubridate)
-library(leaflet)
-library(htmltools)
+
+## read in libraries
+source("libraries.R")
 ```
 
-```{r}
-div(class="band",
-    div(
-        img(src='https://upload.wikimedia.org/wikipedia/commons/8/81/Seoul_%28175734251%29.jpeg', align = "right"),
-        h3("Seoul")
-        )
-    )
+```{r seoulMainImage, out.width="100%", fig.align='center'}
+## adding main image for seoul page
+knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/8/81/Seoul_%28175734251%29.jpeg')
 ```
 
+<br>
+
+<h2 style = text-align:center> About Seoul</h2>

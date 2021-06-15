@@ -1,29 +1,25 @@
 ---
-title: "New York City"
+title: "&nbsp;"
 output:
   html_document:
-    toc_float: false
+    toc: true
+    toc_float: true
 ---
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE )
-root <- rprojroot::find_rstudio_root_file()
-dataDir <- file.path(root, 'data')
-shapeDir <- file.path(root, 'shape')
-library(googlesheets4)
-library(dplyr)
-library(sf)
-library(stringr)
-library(lubridate)
-library(leaflet)
-library(htmltools)
+
+## read in libraries
+source("libraries.R")
 ```
 
-```{r}
-div(class="band",
-    div(
-        img(src='https://upload.wikimedia.org/wikipedia/commons/5/5f/Manhattan_from_Weehawken%2C_NJ.jpg', align = "right"),
-        h3("NYC")
-        )
-    )
+
+```{r nycMainImage, out.width="100%", fig.align='center'}
+## adding main image for nyc page
+knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/5/5f/Manhattan_from_Weehawken%2C_NJ.jpg')
 ```
+
+<br>
+
+<h2 style = text-align:center> About New York City</h2>
 
