@@ -20,6 +20,9 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/7/78/Tok
 <br>
 
 <h2 style = text-align:center> About Tokyo</h2>
+
+<h2 style = text-align:center> Tokyo Research Paper </h2>
+
 <br>
 **Co-evolution of energy and climate change mitigation policies in Japan and Tokyo**  
 *Jelena Aleksejeva, Gerasimos Voulgaris, Yin Long, Alexandros Gasparatos*

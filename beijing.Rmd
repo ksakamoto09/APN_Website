@@ -17,6 +17,7 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/a/a3/Bei
 ```
 
 <br>
+<h2 style = text-align:center> About Beijing  </h2>
 
 <h2 style = text-align:center> Beijing Research Paper </h2>
 

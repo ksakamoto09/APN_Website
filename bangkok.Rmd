@@ -17,6 +17,7 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/f/f6/Ban
 ```
 
 <br>
+<h2 style = text-align:center> About Bangkok  </h2>
 
 <h2 style = text-align:center> Bangkok Research Paper </h2>
 <br>
@@ -25,11 +26,7 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/f/f6/Ban
 *Shobhakar Dhakal, Subina Shrestha*
 <br>
 
-Climate 
-
 This paper analyzes a 9 year period between 2008-2009 on the CO2 emissions in the Bangkok Metropolitan Region(BMR) from four sectors: Residential, Commercial, Industrial, and Transportation. In the time period, the total emissions released increased from 56 million MtCO2 to 60 million MtCO2 at an average annual rate of 0.94%. The sector contributing the most emissions came from transportation with roughly 43% followed by industrial at 31%. 
-
-### Calculating Emissions
 
 To calculate CO2 emissions, the amount of carbon content being combusted from the fuel source must be found, this includes using fuel-specific data or the default emission factor.
 The equation is the Emissions = Fuel(mass or volume) x fuel heat content(higher heating value) x emission factor(per energy unit such as mass or volume). [^1] 
@@ -40,7 +37,6 @@ knitr::include_graphics("https://drive.google.com/uc?export=view&id=1QcZpfE2A6VH
 ```
 <br>
 
-### Findings
 
 A notable dip in CO2 emissions was seen in 2011 which was caused by major flooding in the BMR. The chart shows that residential and industrial sectors saw a drop in the emissions produced compared to 2010. Clearly there is a link with consumption patterns and emissions production, when some areas of the BMR was affected by flooding, the emissions had dropped as well. 
 
@@ -67,7 +63,6 @@ slickR(
 
 Finally transportation made up a large portion of total emissions and there are local policies that are tackling this issue. Thailand is urbanizing much like the rest of the world, and rates for car ownership are going up which increases emissions. As an alternative, the Bangkok Master Plan on Climate Change 2013-2023 has a few consequential initiatives like expanding mass transit, promoting renewable energy, and building electricity consumption efficiency. 
 
-### Conclusion
 
 The Bangkok Metropolitan Region is increasing its population and its CO2 emissions, but there are numerous ways to curb further increases in emissions. Transportation being the largest sector for emissions can have the biggest impact on reduction, while converting to renewable energy sources has already shown benefits at the building level, and lastly reducing consumption is a simple way to reduce future emissions. 
 
