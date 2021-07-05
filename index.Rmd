@@ -27,7 +27,7 @@ to meet the Paris Agreement</h5>
 </div>
 </div>
 <video autoplay muted loop>
-<source src="images/index_assets/construction.webm" type="video/webm">
+<source src="images/index_assets/mining.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
 </div>

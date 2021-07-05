@@ -20,3 +20,45 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/7/78/Tok
 <br>
 
 <h2 style = text-align:center> About Tokyo</h2>
+<br>
+**Co-evolution of energy and climate change mitigation policies in Japan and Tokyo**  
+*Jelena Aleksejeva, Gerasimos Voulgaris, Yin Long, Alexandros Gasparatos*
+<br>
+
+
+Japan is the third largest economy and among the most developed countries in the world.  A key factor in studying greenhouse gas emissions in Japan is to look at its energy system. Japan has a unique energy mix because of its lack of natural resources. The oil shocks in the 1970s led Japan towards energy self-sufficiency and nuclear energy was championed to provide a large portion of domestic energy needs, but with the Tohoku earthquake damaging the Fukushima nuclear power plant and its aftermath have left the country's energy future uncertain.
+
+Tokyo is a major global city and economic center of Japan. The most commonly used administrative boundaries are the Greater Tokyo area comprising the Tokyo Metropolis, Chiba, Saitama, Kanagawa, Yamanashi, Gunma, Tochigi, and Ibaraki prefectures, the Kanto Major metropolitan area includes the Tokyo Metropolis, Chiba, Saitama, and Kanagawa prefectures, and lastly the Tokyo Metropolis which includes the 23 special wards, Tama area, and the Izu and Ogasawara island groups. The study focuses on the Tokyo Metropolis area also referred to as the Tokyo Metropolitan Government (TMG), the central governing body.
+
+<br> 
+```{r tokyoCarousel}
+# this creates the  image carousel
+# name is for the caption which takes in a vector
+# uri is the location of the images
+
+tokyoImages <- tibble(name = c("Fig. 1. Electricity generation in Japan.",
+                                 "Fig. 2. Map of Tokyo across different administrative definitions",
+                                 "Fig. 3. GHG emission by gas, sector, and fuel in Tokyo, and electricity emissions factor."),
+                        uri =c("https://drive.google.com/uc?export=view&id=1TLp6lx677Z_R7A3ywY8EahbJmFeyNvEq",
+                               "https://drive.google.com/uc?export=view&id=1VFRH38TJLs5Fv8LwYmavROwAbzyrHXQe",
+                               "https://drive.google.com/uc?export=view&id=1RVdh0-ZoT2KGsYcIl-HJrYcJskdy4Un1"))
+slickR(tokyoImages$uri, height = 'auto') %synch%
+  (slickR(tokyoImages$name, slideType = 'p') + settings(arrows = FALSE)) + 
+  settings(dots = TRUE) 
+```
+
+<br>
+<br>
+<br>
+<br>
+  
+    
+Japanese energy policies were modeled from the Kyoto Protocol in 1997 resulting in the “3Es”, energy security, environmental protection, and economic efficiency and sustainable economic growth. Much like many urbanizing metropolitan area, Tokyo saw growth in energy and emissions from its residential and commercial sectors as transport and industrial sectors decreased. 
+
+The 2011 Great East Japan earthquake radically altered the Japanese energy system. First, a notable decrease in energy and emissions were recorded as residents were urged to conserve energy in light of electricity shortages. Also, the destruction of the Daiichi Nuclear Power Plant brought the need for reevaluating the safety and necessity of nuclear power programs in Japan. The change in energy mix for the country is a consequential decision as nuclear energy was a proponent in hitting GHG emission reduction targets. 
+
+The study identified various policies that directly impact the energy production/consumption in the TMG. The Top Runner program enacted in 1998 aims at increasing appliance efficiency as well as building materials. The Tokyo Cap-and-Trade program targets the reduction of GHGs for large-scale emitters by hitting reduction targets or purchasing credits to cover the shortfall or face penalties. These and other programs targeted the household, building, transport, and commercial sector energy use to reduce the GHG emissions accounted for in the TMG.
+
+The TMG was found to produce even more ambitious emissions reduction policies than the national government in Japan. Even though these policies in the TMG were set, these were not enough to reduce the overall GHG emissions though. The disruption in the energy mix that came about after the 2011 earthquake has also made the national government’s goals for emissions reduction. Japan and the TMG have set bold decreases in GHGs, and will need new policies to achieve such goals that can be resilient to natural disasters and future energy needs. 
+
+<br>

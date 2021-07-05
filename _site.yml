@@ -25,6 +25,7 @@ navbar:
           href: taipei.html
         - text: "Tokyo"
           href: tokyo.html
+
 output:
   html_document:
     theme: paper

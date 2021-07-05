@@ -19,5 +19,56 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/f/f6/Ban
 <br>
 
 <h2 style = text-align:center> Bangkok Research Paper </h2>
+<br>
+
+**Title TBD**  
+*Shobhakar Dhakal, Subina Shrestha*
+<br>
+
+Climate 
+
+This paper analyzes a 9 year period between 2008-2009 on the CO2 emissions in the Bangkok Metropolitan Region(BMR) from four sectors: Residential, Commercial, Industrial, and Transportation. In the time period, the total emissions released increased from 56 million MtCO2 to 60 million MtCO2 at an average annual rate of 0.94%. The sector contributing the most emissions came from transportation with roughly 43% followed by industrial at 31%. 
+
+### Calculating Emissions
+
+To calculate CO2 emissions, the amount of carbon content being combusted from the fuel source must be found, this includes using fuel-specific data or the default emission factor.
+The equation is the Emissions = Fuel(mass or volume) x fuel heat content(higher heating value) x emission factor(per energy unit such as mass or volume). [^1] 
+
+<br>
+```{r equation1}
+knitr::include_graphics("https://drive.google.com/uc?export=view&id=1QcZpfE2A6VHCoDUPf7714mJ59yejt4TZ")
+```
+<br>
+
+### Findings
+
+A notable dip in CO2 emissions was seen in 2011 which was caused by major flooding in the BMR. The chart shows that residential and industrial sectors saw a drop in the emissions produced compared to 2010. Clearly there is a link with consumption patterns and emissions production, when some areas of the BMR was affected by flooding, the emissions had dropped as well. 
+
+Another finding was that the rate of electricity consumption grew 3% for buildings but the rate of emissions from electricity only increased 1%. This can be attributed to renewable energy source policies that were enacted at the national scale. By using more renewable energy sources, even though consumption of electricity can go up, this could lead to smaller increases in CO2 emissions.
+
+<br>
+```{r bangkokCarousel}
+# this creates the  image carousel
+# name is for the caption which takes in a vector
+# uri is the location of the images
+
+bangkokImages <- tibble(name = c("Fig. 1. CO2 emissions from different sectors in BMR (2008- 2016)",
+                                "Fig. 2. Proportion of CO2 emissions by sectors (2016)"),
+                       uri = c("https://drive.google.com/uc?export=view&id=1EWC44-uBqDB13r9UTX8z-bPAXqFt8Gin",                           "https://drive.google.com/uc?export=view&id=1Svs_yhbxXREESxWSMsausPPBXOHa9CaP"))
+slickR(
+    bangkokImages$uri,
+    height = 'auto',
+    width = '95%') %synch%
+  (slickR(bangkokImages$name, slideType = 'p') + settings(arrows = FALSE)) + 
+  settings(dots = TRUE) 
 
 
+```
+
+Finally transportation made up a large portion of total emissions and there are local policies that are tackling this issue. Thailand is urbanizing much like the rest of the world, and rates for car ownership are going up which increases emissions. As an alternative, the Bangkok Master Plan on Climate Change 2013-2023 has a few consequential initiatives like expanding mass transit, promoting renewable energy, and building electricity consumption efficiency. 
+
+### Conclusion
+
+The Bangkok Metropolitan Region is increasing its population and its CO2 emissions, but there are numerous ways to curb further increases in emissions. Transportation being the largest sector for emissions can have the biggest impact on reduction, while converting to renewable energy sources has already shown benefits at the building level, and lastly reducing consumption is a simple way to reduce future emissions. 
+
+[^1]:https://www.epa.gov/sites/production/files/2016-03/documents/stationaryemissions_3_2016.pdf 

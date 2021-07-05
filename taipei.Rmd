@@ -56,12 +56,12 @@ Development trends in Taipei City can be generalized from west to east and from 
 taipeiImages <- tibble(name = c("Fig. 1. The analytic framework of this research.",
                                 "Fig. 2. Emergy system diagram of building construction.",
                                 "Fig. 3. The spatial distribution of five buildings types in Taipei."),
-                       uri = c("images/taipei/taipei_fig1.png",
-                               "images/taipei/taipei_fig2.png",
-                               "images/taipei/taipei_fig3.png"))
+                       uri = c("https://drive.google.com/uc?export=view&id=1VBTS-1OeOAhgpqczCqBQZiUGBE2vjBHy",
+                               "https://drive.google.com/uc?export=view&id=11NbF3lZy5_fGtgFyZFiksM2aNk5Kyl1W",
+                               "https://drive.google.com/uc?export=view&id=1PAGdGx5wS5tC4JhZOYM-3AQEk6Aaw7Hq"))
 
 # slickR takes the tibble and creates an image carousel
-slickR(taipeiImages$uri) %synch%
+slickR(taipeiImages$uri,height = 'auto') %synch%
   (slickR(taipeiImages$name, slideType = 'p') + settings(arrows = FALSE)) + 
   settings(dots = TRUE) 
 ```
