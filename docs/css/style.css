@@ -187,3 +187,7 @@ h3 {
     background-color: #85bc7385;
     border-color: #2196f3;
 }
+
+.featherlight .featherlight-content {
+  max-width:50%;
+}
