@@ -19,6 +19,8 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/a/a3/Bei
 <br>
 <h2 style = text-align:center> About Beijing  </h2>
 
+text about Beijing context (to be added)
+
 <h2 style = text-align:center> Beijing Research Paper </h2>
 
 <br>
@@ -26,22 +28,26 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/a/a3/Bei
 *Zhihui Li, Xiangzheng Deng, Chao Wang, Lu Peng*
 <br>
 
+### Introduction
+
 This paper tackles three issues faced in greenhouse gas emissions research. 1) Environmental performance metrics such as CO2 emissions are usually calculated at the country or regional scale. Many indices neglect the inputs in the system and rather the emission outputs. 2) A common method called the data envelopment analysis (DEA) for measuring productivity efficiency has some shortcomings that could be improved upon. 3) The focus on CO2 emissions research has primarily fallen on industrial sectors, leaving gaps in residential consumption knowledge.
 
-City Analysis
+### City Analysis
+
 This paper was able to work with city level data from the Beijing-Tianjin-Hebei(BTH) region in China. The BTH region holds three provincial-level administrative areas: Beijing city, Tianjin city, and Hebei province. This region contains more than 110 million residents and a large GDP of greater than 8 trillion CNY. The data being used were derived from the Beijing Statistical Yearbook, Tianjin Statistical Yearbook, Hebei Economic Yearbook, and the China Statistical Yearbook. 
 
-Measuring TFCP and CMP
+### Measuring TFCP and CMP
+
 In this study the Debreu-Farrel efficiency was used as the framework of production efficiency for estimating carbon emission performance. This method tries to minimize undesirable outputs such as carbon emissions while maximized industrial outputs. These two outcomes are produced by the capital stock, labor force, and energy used also known as the production technology set. This helps derive the TFCP or production efficiency, which can be combined with CO2 emissions to calculate the CMP (carbon emission mitigation potential). 
 
-Industrial Consumption
+### Industrial Consumption
 
 Residential Consumption
 There are two ways carbon emissions can be calculated, the direct and indirect residential emissions. Direct emissions can be the result of cooking, heating, etc, while indirect emissions are comprised of the carbon emitted during the creation of products and services being consumed. This is calculated using the carbon emission per unit metric of gross product for each sector with the intermediate demand  captured in the Leontief inverse matrix. Next the value is multiplied by the residential consumption per sector  with another term that differentiates rural and urban residents. 
 
 Structural decomposition analysis can help explore the main factors in the change in emissions over time. It’s a popular method for economists to decompose or uncover main constituents that make up changes over time to an output value. Often times they can broken into scale effects, composition effects, and technical effects.  In this example the researchers broke down household consumption into population size, consumption structure, and consumption level. 
 
-Findings
+### Findings
 
 The total carbon emissions in the industrial sector in the BTH region increased from 542 million tons of CO2(MtC) in 2010 to 649 Mtc in 2016, this increase is about a 20% difference in 6 years. The Hebei region contributed the largest portion of this change compared to Tianjin which had minor increases and Beijing which decreased its emissions. In Beijing, the TFCP increased during this period, while Tianjin decreased slightly, but there were no clear findings about TFCP from Hebei.
 
@@ -69,7 +75,7 @@ slickR(
 <br>
 <br>
 
-Conclusion
+### Conclusion
 
 This study contributed to the growing literature of carbon emissions in an urban asian context, specifically by breaking down TFCP and CMP for 39 industrial sectors, but also in calculating direct and indirect emissions from residential consumption in the BTH region.  While CO2 emission rose in both industrial and residential sectors, there are some positive findings from the study. For example, TFCP did rise for some areas, and this study also highlights sectors that could be taken into more careful consideration such as the manufacturing of non metallic mineral products, gast and water production, and mining and processing of ferrous metal ores. From a residential perspective, indirect emissions grew the most in the study period. The growth in residential consumption levels is worrying for the future of emission reduction, but the use of consumption structure could be a lever towards taming future emission output.
 

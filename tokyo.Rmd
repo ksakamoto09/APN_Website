@@ -21,6 +21,8 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/7/78/Tok
 
 <h2 style = text-align:center> About Tokyo</h2>
 
+Text to be added
+
 <h2 style = text-align:center> Tokyo Research Paper </h2>
 
 <br>
@@ -28,6 +30,7 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/7/78/Tok
 *Jelena Aleksejeva, Gerasimos Voulgaris, Yin Long, Alexandros Gasparatos*
 <br>
 
+### Introuduction
 
 Japan is the third largest economy and among the most developed countries in the world.  A key factor in studying greenhouse gas emissions in Japan is to look at its energy system. Japan has a unique energy mix because of its lack of natural resources. The oil shocks in the 1970s led Japan towards energy self-sufficiency and nuclear energy was championed to provide a large portion of domestic energy needs, but with the Tohoku earthquake damaging the Fukushima nuclear power plant and its aftermath have left the country's energy future uncertain.
 
@@ -55,10 +58,15 @@ slickR(tokyoImages$uri, height = 'auto') %synch%
 <br>
 <br>
   
-    
+### Energy Policies
+
 Japanese energy policies were modeled from the Kyoto Protocol in 1997 resulting in the “3Es”, energy security, environmental protection, and economic efficiency and sustainable economic growth. Much like many urbanizing metropolitan area, Tokyo saw growth in energy and emissions from its residential and commercial sectors as transport and industrial sectors decreased. 
 
+### Natural Disaster Risk
+
 The 2011 Great East Japan earthquake radically altered the Japanese energy system. First, a notable decrease in energy and emissions were recorded as residents were urged to conserve energy in light of electricity shortages. Also, the destruction of the Daiichi Nuclear Power Plant brought the need for reevaluating the safety and necessity of nuclear power programs in Japan. The change in energy mix for the country is a consequential decision as nuclear energy was a proponent in hitting GHG emission reduction targets. 
+
+### Findings
 
 The study identified various policies that directly impact the energy production/consumption in the TMG. The Top Runner program enacted in 1998 aims at increasing appliance efficiency as well as building materials. The Tokyo Cap-and-Trade program targets the reduction of GHGs for large-scale emitters by hitting reduction targets or purchasing credits to cover the shortfall or face penalties. These and other programs targeted the household, building, transport, and commercial sector energy use to reduce the GHG emissions accounted for in the TMG.
 

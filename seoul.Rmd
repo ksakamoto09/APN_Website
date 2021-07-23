@@ -28,11 +28,19 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/8/81/Seo
 *Kwangik Wang*
 <br>
 
+### Introduction
+
 Climate change effects will be felt by all, which is why national and local governments are responding to the challenges it brings. South Korea had committed to reducing greenhouse gas emissions by 30% by 2020 after the 2008 G7 summit. One path towards GHG reduction was through green growth initiatives that were rolled out in five-year plans.
+
+### Green Growth
 
 Green growth is a term to describe a path of economic growth that is environmentally sustainable. The goal is to expand economic opportunities and address environmental pressures that could undermine growth.  Some of the goals are efficiencies in natural resource use, reducing waste and energy consumption, removing subsidies that harm the environment, and providing greater confidence through mitigating major environmental risks.[^1]
 
-Locally, the Seoul Metropolitan Government (SMG) also pioneered their own plan towards low-carbon green growth. The result was an initiative called 2030 Green Design Seoul, that aims at “realizing a Green Competitive City by adopting Climate Adaptation · Green growth · High Temperature Adaptation” to secure the future of Seoul. Under the umbrella of the “Climate Adaptive City” several projects were created to reduce GHGs, they included the energy, transportation, and building sectors to achieve these goals.
+### Local Policy Analysis
+
+The Seoul Metropolitan Government (SMG) also pioneered their own plan towards low-carbon green growth. The result was an initiative called 2030 Green Design Seoul, that aims at “realizing a Green Competitive City by adopting Climate Adaptation · Green growth· High Temperature Adaptation” to secure the future of Seoul. Under the umbrella of the “Climate Adaptive City” several projects were created to reduce GHGs, they included the energy, transportation, and building sectors to achieve these goals.
+
+###  Building Scale Analysis
 
 An analysis of building level energy use was also conducted as part of this research study. The Ministry of Land, Infrastructure, and Transport provides monthly and annual electricity and gas consumption data. The study took 2015 and 2017 consumption data to compare the spatial density of energy consumption in Seoul. The same was done for the population density in Seoul to compare the relative change across the area.
 
@@ -60,6 +68,8 @@ slickR(taipeiImages$uri,height = 'auto') %synch%
 <br>
 <br>
 <br>
+
+### Conclusion
 
 Some major takeaways from the analysis were that even though the population in Seoul decreased, there were still areas of the city that saw growth in electricity and gas consumption. Also while the national and local green growth policies are progressive, they need to be tied more closely with physical spaces and specialized. One area that could use more focus is the spatial planning around local energy sources and the reduction of energy consumption to achieve GHG reduction goals. 
 

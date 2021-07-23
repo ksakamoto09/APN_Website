@@ -23,3 +23,8 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/5/5f/Man
 
 <h2 style = text-align:center> About New York City</h2>
 
+to be added
+
+<h2 style = text-align:center> Seoul Research Paper</h2>
+
+to be added

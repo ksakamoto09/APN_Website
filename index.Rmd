@@ -19,12 +19,12 @@ source("data.R")
 <br>
 <div class="videoContainer">
 <div class="overlay">
+</div>
 <div class="overlay-text">
 <h1> APN Sustainable Cities Research</h2>
 <h4>Tracking Influences of Asian Urban GHG emissions 
 for Sustainability Policies: Identifying Low Carbon Pathways 
 to meet the Paris Agreement</h5>
-</div>
 </div>
 <video autoplay muted loop>
 <source src="images/index_assets/mining.webm" type="video/webm">
@@ -34,7 +34,8 @@ Your browser does not support the video tag.
 
 ```{r grantBlurb}
 br()
-h3("About the Grant", style = "text-align:center")
+h2("About the Grant", style = "text-align:center")
+br()
 p(class = "blurb",
 "Over the past decades, Asia has undergone rapid urbanization.  This transformation has accompanied increased energy demand and subsequent greenhouse gas (GHG) emissions.  From 1990 to 2010, the number of urban residents in Asia grew by over 800 million, increasing the Asian share of global urban population from 45 to 52% while Asian CO2 emissions increased from 6 Gt to 14 Gt, increasing its share of global GHG emissions from 39 to 54%.  Further urbanization portends even higher emission levels.  The recent Paris Agreement (2015) has drawn attention to the dramatic actions necessary to keep emissions low and therefore climate stable.  Organizations such as UN-HABITAT & UNESCAP (through the creation of the Northeast Asia Low Carbon Cities platform) and Asian governments are moving to develop low carbon cities.  Application of mitigation policy for low carbon societies is complicated, however, by the unique regional development conditions (socially, physically, economically and politically).  Policies appropriate elsewhere may not work in the Asian context making it necessary to understand the historical dynamics associated with regional urban development, energy use and GHG emissions.  To address this challenge, we propose urban case study historical analyses of emissions and their driving forces in Asian cities.")  
 
@@ -51,7 +52,8 @@ br()
 
 ```{r iscBlurb}
 br()
-h3("About the ISC", style = "text-align:center")
+h2("About the ISC", style = "text-align:center")
+br()
 p(class = "blurb",
 "The Institute for Sustainable Cities at Hunter College emerged from the ideas and goals of Ted Kheel, labor lawyer and nature enthusiast, to enhance New Yorker’s understanding and appreciation for sustainability.  William D. Solecki was the first Director, who in 2015, returned to his full-time position in the Department of Geography.  Peter J. Marcotullio has been the Director since that time.  The Institute serves a CUNY-wide audience of scholars, students and staff as well as performs research and outreach to local community and government offices.")
 br()
@@ -70,7 +72,8 @@ br()
 ```
 
 ```{r apnBlurb}
-h3("About the APN", style = "text-align:center")
+h2("About the APN", style = "text-align:center")
+br()
 p(class = "blurb",
 a("(APN )", "https://www.apn-gcr.org") ,
 "is an intergovernmental network of 22 countries working towards an 
@@ -82,7 +85,9 @@ strategies and measures, effective linkages between science and policy, and scie
 
 
 ```{r}
-h3("Map of Research Locations")
+br()
+h2("Map of Research Locations", style = "text-align:center")
+br()
 ```
 
 
@@ -115,7 +120,7 @@ popup <- paste0( "Country: "
                  "'>Research Page</a></b>"
                )
 ## actual map with the`mainMapDF`
-leaflet(mainMapDF) %>%
+leaflet(mainMapDF, width = "100%") %>%
   addProviderTiles(providers$Esri.WorldImagery) %>%
   addMarkers(popup = ~popup) %>%
   addMarkers(lat = 34.69838, lng = 135.215418, icon = APNIcon,
