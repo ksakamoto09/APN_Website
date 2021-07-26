@@ -68,6 +68,7 @@ slickR(taipeiImages$uri,height = 'auto') %synch%
 <br>
 <br>
 <br>
+<br>
 
 ### Conclusion
 

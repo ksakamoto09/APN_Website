@@ -57,6 +57,7 @@ slickR(tokyoImages$uri, height = 'auto') %synch%
 <br>
 <br>
 <br>
+<br>
   
 ### Energy Policies
 
