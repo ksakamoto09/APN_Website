@@ -13,20 +13,29 @@
 
 <title> </title>
 
-<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
-<script src="site_libs/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <script src="site_libs/jquery-migrate-3.1.0/jquery-migrate-3.1.0.min.js"></script>
 <link href="site_libs/slick-1.8.1/slick/slick.css" rel="stylesheet" />
 <link href="site_libs/slick-1.8.1/slick/slick-theme.css" rel="stylesheet" />
@@ -47,11 +56,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -64,32 +68,6 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -101,10 +79,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -121,40 +95,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 64px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h2 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h3 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h4 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h5 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h6 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -182,7 +129,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -194,7 +141,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -205,10 +152,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -220,7 +180,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -346,7 +305,7 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
+<div class="row">
 <div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
@@ -422,7 +381,7 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -456,8 +415,9 @@ Bangkok Research Paper
 <h3>Findings</h3>
 <p>A notable dip in CO2 emissions was seen in 2011 which was caused by major flooding in the BMR. The chart shows that residential and industrial sectors saw a drop in the emissions produced compared to 2010. Clearly there is a link with consumption patterns and emissions production, when some areas of the BMR was affected by flooding, the emissions had dropped as well.</p>
 <p>Another finding was that the rate of electricity consumption grew 3% for buildings but the rate of emissions from electricity only increased 1%. This can be attributed to renewable energy source policies that were enacted at the national scale. By using more renewable energy sources, even though consumption of electricity can go up, this could lead to smaller increases in CO2 emissions.</p>
-<p><br> <div id="htmlwidget-349980c93f4157ad28a3" style="width:95%;height:480px;" class="slickR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-349980c93f4157ad28a3">{"x":[{"obj":"<div class=\"baseDiv_bump_522636154899374\">\n  <div>\n    <img src=\"https://drive.google.com/uc?export=view&amp;id=1EWC44-uBqDB13r9UTX8z-bPAXqFt8Gin\" style=\"width:95%;height:auto;margin-left:auto;margin-right:auto;\"/>\n  <\/div>\n  <div>\n    <img src=\"https://drive.google.com/uc?export=view&amp;id=1Svs_yhbxXREESxWSMsausPPBXOHa9CaP\" style=\"width:95%;height:auto;margin-left:auto;margin-right:auto;\"/>\n  <\/div>\n<\/div>","divName":"baseDiv_bump_522636154899374","slideh":"auto","slidew":"95%","slickOpts":{"asNavFor":".baseDiv_bump_40776337031275","dots":true}},{"obj":"<div class=\"baseDiv_bump_40776337031275\">\n  <div>\n    <p style=\"width:95%;height:99%;margin-left:auto;margin-right:auto;\">Fig. 1. CO2 emissions from different sectors in BMR (2008- 2016)<\/p>\n  <\/div>\n  <div>\n    <p style=\"width:95%;height:99%;margin-left:auto;margin-right:auto;\">Fig. 2. Proportion of CO2 emissions by sectors (2016)<\/p>\n  <\/div>\n<\/div>","divName":"baseDiv_bump_40776337031275","slideh":"99%","slidew":"95%","slickOpts":{"arrows":false,"asNavFor":".baseDiv_bump_522636154899374"}}],"evals":[],"jsHooks":[]}</script></p>
+<p><br></p>
+<div id="htmlwidget-415e893e1c2325dda7dc" style="width:95%;height:480px;" class="slickR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-415e893e1c2325dda7dc">{"x":[{"obj":"<div class=\"baseDiv_bump_227581496816128\">\n  <div>\n    <img src=\"https://drive.google.com/uc?export=view&amp;id=1EWC44-uBqDB13r9UTX8z-bPAXqFt8Gin\" style=\"width:95%;height:auto;margin-left:auto;margin-right:auto;\"/>\n  <\/div>\n  <div>\n    <img src=\"https://drive.google.com/uc?export=view&amp;id=1Svs_yhbxXREESxWSMsausPPBXOHa9CaP\" style=\"width:95%;height:auto;margin-left:auto;margin-right:auto;\"/>\n  <\/div>\n<\/div>","divName":"baseDiv_bump_227581496816128","slideh":"auto","slidew":"95%","slickOpts":{"asNavFor":".baseDiv_bump_0807024850510061","dots":true}},{"obj":"<div class=\"baseDiv_bump_0807024850510061\">\n  <div>\n    <p style=\"width:95%;height:99%;margin-left:auto;margin-right:auto;\">Fig. 1. CO2 emissions from different sectors in BMR (2008- 2016)<\/p>\n  <\/div>\n  <div>\n    <p style=\"width:95%;height:99%;margin-left:auto;margin-right:auto;\">Fig. 2. Proportion of CO2 emissions by sectors (2016)<\/p>\n  <\/div>\n<\/div>","divName":"baseDiv_bump_0807024850510061","slideh":"99%","slidew":"95%","slickOpts":{"arrows":false,"asNavFor":".baseDiv_bump_227581496816128"}}],"evals":[],"jsHooks":[]}</script>
 <p>Finally transportation made up a large portion of total emissions and there are local policies that are tackling this issue. Thailand is urbanizing much like the rest of the world, and rates for car ownership are going up which increases emissions. As an alternative, the Bangkok Master Plan on Climate Change 2013-2023 has a few consequential initiatives like expanding mass transit, promoting renewable energy, and building electricity consumption efficiency.</p>
 </div>
 <div id="conclusion" class="section level3">
@@ -513,7 +473,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
@@ -522,6 +482,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

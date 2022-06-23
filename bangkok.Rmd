@@ -58,14 +58,13 @@ Another finding was that the rate of electricity consumption grew 3% for buildin
 bangkokImages <- tibble(name = c("Fig. 1. CO2 emissions from different sectors in BMR (2008- 2016)",
                                 "Fig. 2. Proportion of CO2 emissions by sectors (2016)"),
                        uri = c("https://drive.google.com/uc?export=view&id=1EWC44-uBqDB13r9UTX8z-bPAXqFt8Gin",                           "https://drive.google.com/uc?export=view&id=1Svs_yhbxXREESxWSMsausPPBXOHa9CaP"))
+
 slickR(
     bangkokImages$uri,
     height = 'auto',
     width = '95%') %synch%
   (slickR(bangkokImages$name, slideType = 'p') + settings(arrows = FALSE)) + 
   settings(dots = TRUE) 
-
-
 ```
 
 Finally transportation made up a large portion of total emissions and there are local policies that are tackling this issue. Thailand is urbanizing much like the rest of the world, and rates for car ownership are going up which increases emissions. As an alternative, the Bangkok Master Plan on Climate Change 2013-2023 has a few consequential initiatives like expanding mass transit, promoting renewable energy, and building electricity consumption efficiency. 

@@ -13,16 +13,28 @@
 
 <title>About the Team</title>
 
-<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -34,11 +46,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -51,32 +58,6 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -88,10 +69,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -108,40 +85,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 64px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h2 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h3 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h4 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h5 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h6 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -169,7 +119,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -181,7 +131,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -192,10 +142,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -207,7 +170,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -336,7 +298,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -345,9 +307,6 @@ $(document).ready(function () {
 </div>
 
 
-<!-- this is the lightbox popup js -->
-<link href="//cdn.rawgit.com/noelboss/featherlight/1.3.2/release/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles" />
-<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.2/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 <p>Create summary of researchers associated with the grant. Who was funding the project, where the researchers are based, and how they are connected with each other. Is there a singular mission or research interest that ties their work together. How is it culminating together to answer the questions the grant is hoping to answer?</p>
 <hr />
 <div>
@@ -583,6 +542,142 @@ Taipei, Taiwan
 <hr/>
 </div>
 <div>
+<h2>New York</h2>
+<div class="row" style="margin-left:12.5%">
+<div class="col-md-4">
+<a href="#" data-featherlight="#bio-ProfessorPeterMarcotullio">
+<img src="https://drive.google.com/uc?export=view&amp;id=1uIv9tBq3ST2rx7Jn98oPs2fF-x6rcNQg" width="200" height="200"/>
+</a>
+<p tyle="text-align:left; color:#727272;">Professor Peter Marcotullio</p>
+<div>
+<div class="lightbox" id="bio-ProfessorPeterMarcotullio">
+<a href="http://www.geo.hunter.cuny.edu/people/fac/marcotullio.html">
+<h3>Professor Peter Marcotullio</h3>
+</a>
+<p style="font-family:Lato; font-weight:500; font-style:normal; &#10;                  font-size:14px; letter-spacing:.4px; line-height:2.18em; color:#999999;">
+<a href="https://hunter.cuny.edu/">CUNY Hunter College</a>
+<br/>
+<a href="http://www.geo.hunter.cuny.edu/">CUNY Institute for Sustainable Cities (CISC)</a>
+<br/>
+New York, USA
+<br/>
+<a href="peter.marcotullio@hunter.cuny.edu">Email</a>
+<br/>
+<a href="new york.html">APN City Page</a>
+<br/>
+<p>TBA</p>
+</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<a href="#" data-featherlight="#bio-MrAllanLu">
+<img src="https://drive.google.com/uc?export=view&amp;id=1uIv9tBq3ST2rx7Jn98oPs2fF-x6rcNQg" width="200" height="200"/>
+</a>
+<p tyle="text-align:left; color:#727272;">Mr. Allan Lu</p>
+<div>
+<div class="lightbox" id="bio-MrAllanLu">
+<a href="http://www.geo.hunter.cuny.edu/people/fac/marcotullio.html">
+<h3>Mr. Allan Lu</h3>
+</a>
+<p style="font-family:Lato; font-weight:500; font-style:normal; &#10;                  font-size:14px; letter-spacing:.4px; line-height:2.18em; color:#999999;">
+<a href="https://hunter.cuny.edu/">CUNY Hunter College</a>
+<br/>
+<a href="http://www.geo.hunter.cuny.edu/">CUNY Institute for Sustainable Cities (CISC)</a>
+<br/>
+New York, USA
+<br/>
+<a href="al@hunter.edu">Email</a>
+<br/>
+<a href="new york.html">APN City Page</a>
+<br/>
+<p>TBA</p>
+</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<a href="#" data-featherlight="#bio-MsJessicaStratton">
+<img src="https://drive.google.com/uc?export=view&amp;id=1uIv9tBq3ST2rx7Jn98oPs2fF-x6rcNQg" width="200" height="200"/>
+</a>
+<p tyle="text-align:left; color:#727272;">Ms. Jessica Stratton</p>
+<div>
+<div class="lightbox" id="bio-MsJessicaStratton">
+<a href="http://www.geo.hunter.cuny.edu/people/fac/marcotullio.html">
+<h3>Ms. Jessica Stratton</h3>
+</a>
+<p style="font-family:Lato; font-weight:500; font-style:normal; &#10;                  font-size:14px; letter-spacing:.4px; line-height:2.18em; color:#999999;">
+<a href="https://hunter.cuny.edu/">CUNY Hunter College</a>
+<br/>
+<a href="http://www.geo.hunter.cuny.edu/">CUNY Institute for Sustainable Cities (CISC)</a>
+<br/>
+New York, USA
+<br/>
+<a href="js@hunter.edu">Email</a>
+<br/>
+<a href="new york.html">APN City Page</a>
+<br/>
+<p>TBA</p>
+</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<a href="#" data-featherlight="#bio-MrNicholasRio">
+<img src="https://drive.google.com/uc?export=view&amp;id=1uIv9tBq3ST2rx7Jn98oPs2fF-x6rcNQg" width="200" height="200"/>
+</a>
+<p tyle="text-align:left; color:#727272;">Mr. Nicholas Rio</p>
+<div>
+<div class="lightbox" id="bio-MrNicholasRio">
+<a href="http://www.geo.hunter.cuny.edu/people/fac/marcotullio.html">
+<h3>Mr. Nicholas Rio</h3>
+</a>
+<p style="font-family:Lato; font-weight:500; font-style:normal; &#10;                  font-size:14px; letter-spacing:.4px; line-height:2.18em; color:#999999;">
+<a href="https://hunter.cuny.edu/">CUNY Hunter College</a>
+<br/>
+<a href="http://www.geo.hunter.cuny.edu/">CUNY Institute for Sustainable Cities (CISC)</a>
+<br/>
+New York, USA
+<br/>
+<a href="nr@hunter.edu">Email</a>
+<br/>
+<a href="new york.html">APN City Page</a>
+<br/>
+<p>TBA</p>
+</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<a href="#" data-featherlight="#bio-MsGowriAnand">
+<img src="https://drive.google.com/uc?export=view&amp;id=1uIv9tBq3ST2rx7Jn98oPs2fF-x6rcNQg" width="200" height="200"/>
+</a>
+<p tyle="text-align:left; color:#727272;">Ms. Gowri Anand</p>
+<div>
+<div class="lightbox" id="bio-MsGowriAnand">
+<a href="http://www.geo.hunter.cuny.edu/people/fac/marcotullio.html">
+<h3>Ms. Gowri Anand</h3>
+</a>
+<p style="font-family:Lato; font-weight:500; font-style:normal; &#10;                  font-size:14px; letter-spacing:.4px; line-height:2.18em; color:#999999;">
+<a href="https://hunter.cuny.edu/">CUNY Hunter College</a>
+<br/>
+<a href="http://www.geo.hunter.cuny.edu/">CUNY Institute for Sustainable Cities (CISC)</a>
+<br/>
+New York, USA
+<br/>
+<a href="ga@hunter.edu">Email</a>
+<br/>
+<a href="new york.html">APN City Page</a>
+<br/>
+<p>TBA</p>
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+</div>
+<div>
 <h2>Seoul</h2>
 <div class="row" style="margin-left:12.5%">
 <div class="col-md-4">
@@ -614,19 +709,6 @@ Seoul, South Korea
 </div>
 
 
-<div id="footer" class="band full">
-<div class="bandContent">
-  <div id="copyright">© Copyright 2021 Institute for Sustainable Cities, CUNY Hunter College</div>
-  <div id="logos">
-    <a href="https://twitter.com/cunysustainable" class="footerLogo twitter"></a>
-    <a href="https://github.com/rstudio" class="footerLogo gitHub"></a>
-    <a href="https://www.youtube.com/user/cunysustainable" class="footerLogo youtube"></a>
-    <a href="https://www.facebook.com/CUNYCISC/" class="footerLogo facebook"></a>
-    <a href="https://www.slideshare.net/cunysustainable" class="footerLogo slideshare"></a>
-  </div>
-</div>
-</div>
-
 
 
 </div>
@@ -653,7 +735,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

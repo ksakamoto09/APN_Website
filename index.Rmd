@@ -15,7 +15,6 @@ source("libraries.R")
 source("data.R")
 ```
 
-<!-- this section has the video for the home page -->
 <br>
 <div class="videoContainer">
 <div class="overlay">
