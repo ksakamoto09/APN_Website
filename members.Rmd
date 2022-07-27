@@ -1,5 +1,5 @@
 ---
-title: "About the Team"
+title: "&nbsp;"
 output:
   html_document:
     toc_float: false
@@ -9,6 +9,7 @@ output:
 ---
 
 
+## About the Team
 
 ```{r setup, include=FALSE}
 ##setting code chunks for rest ofz sections no code being shown, and no messages.

@@ -23,8 +23,28 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/5/5f/Man
 
 <h2 style = text-align:center> About New York City</h2>
 
-to be added
+New York City is located on the northeastern coast of the United States at the mouth of the Hudson River along the southern tip of New York State.  The city has a long history dating back to the Lenape people who hunted, fished and farmed the area.  Europeans began exploring the region in the beginning of the 16th century.  The Dutch settled in the island of Manhattan around 1626 and the British seized the settlement in 1664.   The United States declared independence from the British in 1776 making New York City the first capital in 1785.  After the Revolutionary War, as a port and industrial center the city grew rapidly during the 18th, 19th and early 20th centuries.  New York City shifted to a service-oriented economy during the late 20th century and became one of the world’s premier global cities.  At that time, the city’s population stabilized at around 8 million.  Also during the late 20th century the city implemented a number of environmental policies beyond the provision of parks, including water and air quality regulations that substantially improve the quality of the urban environment.  During the early 21st century, attention turned to addressing sustainability and climate change.  Mayor Bloomberg was one of the most vocal US city authorities to advocate for climate change mitigation.  Using his influence, he helped New York City join the C40, a network of mayors of nearly 100 world-leading cities collaborating to deliver the urgent action needed right now to confront the climate crisis.  During this period, the city began annual carbon mitigation inventories, mitigation measures and adaptation policies, which have been continued by his predecessors.  Estimates suggest that in 2005, total GHG emissions from New York City were 64.7 Mt annually.  By 2020, they had dropped to 48.4 Mt (by approximately 25%).  The drop occurred despite an increase in population of over 500,000 residents.  Currently, the city has extensive plans to meet 2050 goals of further significant reductions in emissions.  
 
-<h2 style = text-align:center> Seoul Research Paper</h2>
+<h2 style = text-align:center> New York City Research Paper</h2>
 
-to be added
+### Introduction
+
+Residential energy use is a sizable contributor to overall greenhouse gas emissions in the New York-New Jersey-Connecticut tri-state region. Therefore any measures to reduce the emission of greenhouse gasses should consider residential energy uses. One obstacle in solving the issue is understanding the household characteristics that impact energy use. Another aspect that would be useful is temporal and geographic trends of residential energy use in measuring changes. This paper puts forth a 1 square kilometer resolution analysis of residential energy use for the tri-state area from 1993-2009.
+
+### Data and Methods
+
+There were multiple data sources used in the study: including the RECS a survey of household characteristics from the EIA, decennial census from the US Census Bureau, Commercial Buildings Energy Consumption Survey's climate map, the State Energy Data Systems data on total energy use by sector and fuel type, NCHS's Urban-Rural Classification Scheme for Counties, and the RPA's definition of the New York Metropolitan Region.
+
+There was three major steps in the methods section: regression for energy use, census data aggregation for spatial resolution, and validation. 
+
+
+### Findings
+
+the tri-state region's total residential energy use was about the same during the study period. There was a change in the energy services for example, energy for space heating dropped by 16.4 %  while energy for cooling increased by over 2400%, and energy use fo appliances increased by 80%. Geographically the greatest absolute increase in total energy use was for cooling in the outer suburbs, followed by an increase in cooling energy use in the inner-suburban metropolitan area. Lastly the energy use per household also changed temporally, the only area that didn't change was the outer suburban metropolitan areas, while other regions experienced drops in average total household energy use. 
+
+### Policy Implications
+
+This study showed differential household energy use between core urban and suburban areas. These findings can lead to geography-specific policies to reduce greenhouse gas emissions. Conservation programs using proven technology to reduce energy use can be more effective in suburban areas than in counties that are already efficiently using energy. In addition, other energy policies such as building energy codes, incentives and energy labels can be enhanced with mandates, targeting net-zero energy buildings, and public awareness campaigns. 
+### Conclusions
+
+The most rapid changes over time were in the outer suburban areas. There were also changes in the average household end uses seen in cooling and appliance energy expenditures. By incorporating spatio-temporal analysis, geographically-specific energy policies can go further in achieving policy goals. 

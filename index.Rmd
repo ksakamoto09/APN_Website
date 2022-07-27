@@ -21,15 +21,16 @@ source("data.R")
 </div>
 <div class="overlay-text">
 <h1> APN Sustainable Cities Research</h2>
-<h4>Tracking Influences of Asian Urban GHG emissions 
-for Sustainability Policies: Identifying Low Carbon Pathways 
+<h4>Tracking Influences of Asian Urban GHG emissions
+for Sustainability Policies: Identifying Low Carbon Pathways
 to meet the Paris Agreement</h5>
 </div>
 <video autoplay muted loop>
-<source src="images/index_assets/mining.webm" type="video/webm">
+<source src="images/index_assets/asiaCombined.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 </div>
+
 
 ```{r grantBlurb}
 br()
