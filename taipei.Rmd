@@ -98,7 +98,7 @@ slickR(taipeiImages$uri,height = 'auto') %synch%
 
 The unit of measure for the embodied energy is the solar emergy unit (sej) and can be converted through the Unit Emergy Value (UEV). The energy flows are broken into renewable and non-renewable flows which is aggregated into the emergy density per square meter. Then the variables used in the emergy synthesis can be used to calculate the CO2 emissions from building material production and transportation through a table of figures from the Architecture and Building Research Institute of Taiwan's Ministry of the Interior (MOCA)  
  
-Higher emergy densities correlated with higher building-CO3 emissions, especially between building materials and the construction technology. The taller the building, the deeper the foundation needs to be which increases CO2 emissions during construction. There is also a negative correlation between interior wall compartments and increases in the number of floors on CO2 emissions. Building CO2 and Emergy Density were highly correlated as well as the building-CO2 and the daily consumption of CO2 density.  
+Higher emergy densities correlated with higher building-CO2 emissions, especially between building materials and the construction technology. The taller the building, the deeper the foundation needs to be which increases CO2 emissions during construction. There is also a negative correlation between interior wall compartments and increases in the number of floors on CO2 emissions. Building CO2 and Emergy Density were highly correlated as well as the building-CO2 and the daily consumption of CO2 density.  
 
 ### Findings
 

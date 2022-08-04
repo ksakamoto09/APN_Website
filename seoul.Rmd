@@ -27,9 +27,9 @@ electrical facilities, railroads, streetcar tracks, parks, waterworks systems, s
 <h2 style = text-align:center> Seoul Research Paper</h2>
 
 <br>
-**Title TBD**  
+**GHG Emission Analysis and Policy Status of Seoul**  
 *Kwangik Wang*
-<br>
+<br> 
 
 ### Introduction
 
@@ -70,6 +70,9 @@ slickR(taipeiImages$uri,height = 'auto') %synch%
 <br>
 <br>
 <br>
+<br>
+<br>
+
 <br>
 <br>
 

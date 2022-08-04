@@ -21,7 +21,8 @@ knitr::include_graphics('https://upload.wikimedia.org/wikipedia/commons/7/78/Tok
 
 <h2 style = text-align:center> About Tokyo</h2>
 
-Tokyo is located at the head of Tokyo Bay, the prefecture forms part of the Kantō region on the central Pacific coast of Japan's main island of Honshu. The history of the city of Tokyo stretches back over 400 years. Originally named Edo, the city started to flourish during the Tokugawa Shogunate. As the center of politics and culture in Japan, Edo grew into a large city with a population of over a million by the mid-eighteenth century. The Edo Period lasted for nearly 260 years until the Meiji Restoration in 1868, when imperial rule was restored.  The Emperor moved to Edo, which was renamed Tokyo and designated as the capital of the nation.  During the Meiji era (1868-1912), Japan began its avid assimilation of Western civilization and Tokyo saw the construction of stone and brick buildings, telecommunications and railway lines.  The devastation of the Great Kanto Earthquake of 1923 did not stop the growth of the city.  In 1931 Tokyo Airport was completed at Haneda, and in 1941 the Port of Tokyo was opened. By 1935 the resident population of Tokyo had grown to 6.36 million, comparable to the populations of New York and London.  During WWII Tokyo suffered again, as it was bombed over 100 times, with widespread destruction and loss of life.  During the 1950s, the city and country began a recovery which lead to a growth spurt from the 1960s that latest until 1990.  The city was hit hard again in March 2011, when the Great East Japan Earthquake struck the Tohoku region.  Despite these tragedies, the Tokyo metropolitan region has continued to thrive.  It is currently one of the world’s most populous metropolitan areas with an estimated 37.468 million residents in 2018. Its metropolitan area is approximately 13,450 square kilometers.  Within city proper, the population is 13.99 million people. Tokyo is the political and economic center of the country, as well as the seat of the Emperor of Japan and the national government. Tokyo has a massive urban economy and is categorized as one of the world’s premier global cities.  The Tokyo Metropolitan Government (TMG) has been monitoring its energy consumption and GHG emissions since 1990.  The city’s GHG emissions at the start of the period 57.6 Mt which rose to 70 Mt in 2003.  Thereafter emissions declined to 63.9 Mt in 2018.  While electricity related GHG emissions have increased since 2010, with sourcing of electricity from fossil fuels, other fuel emissions have decreased, providing a small decrease in emissions since the Tohoku earthquake.   
+Tokyo is located at the head of Tokyo Bay. The prefecture forms part of the Kantō region on the central Pacific coast of Japan’s main island of Honshu. The history of the city of Tokyo stretches back over 400 years. Originally named Edo, the city started to flourish during the Tokugawa Shogunate. As the center of politics and culture in Japan, Edo grew into a large city with a population of over a million by the mid-eighteenth century. The Edo Period lasted for nearly 260 years until the Meiji Restoration in 1868, when imperial rule was restored. The Emperor moved to Edo, which was renamed Tokyo and designated as the capital of the nation. During the Meiji
+era (1868-1912), Japan began its avid assimilation of Western civilization and Tokyo saw the construction of stone and brick buildings, telecommunications and railway lines. The devastation of the Great Kanto Earthquake of 1923 did not stop the growth of the city. In 1931 Tokyo Airport was completed at Haneda, and in 1941 the Port of Tokyo was opened. By 1935 the resident population of Tokyo had grown to 6.36 million, comparable to the populations of New York and London. During WWII Tokyo suffered again, as it was bombed over 100 times, with widespread destruction and loss of life. During the 1950s, the city and country began a recovery which lead to a growth spurt from the 1960s that latest until 1990. The city was hit hard again in March 2011, when the Great East Japan Earthquake struck the Tohoku region. Despite these tragedies, the Tokyo metropolitan region has continued to thrive. It is currently one of the world’s most populous metropolitan areas with an estimated 37.468 million residents in 2018. Its metropolitan area is approximately 13,450 square kilometers. Within city proper, the population is 13.99 million people. Tokyo is the political and economic center of the country, as well as the seat of the Emperor of Japan and the national government. Tokyo has a massive urban economy and is categorized as one of the world’s premier global cities. The Tokyo Metropolitan Government (TMG) has been monitoring its energy consumption and GHG emissions since 1990. The city’s GHG emissions at the start of the period was 57.6 Mt, which rose to 70 Mt in 2003. Thereafter emissions declined to 63.9 Mt in 2018. While electricity related GHG emissions have increased since 2010, with sourcing of electricity from fossil fuels, other fuel emissions have decreased, providing a small decrease in emissions since the Tohoku earthquake. 
 
 <h2 style = text-align:center> Tokyo Research Paper </h2>
 
@@ -30,13 +31,12 @@ Tokyo is located at the head of Tokyo Bay, the prefecture forms part of the Kant
 *Jelena Aleksejeva, Gerasimos Voulgaris, Yin Long, Alexandros Gasparatos*
 <br>
 
-### Introuduction
+### Introduction
 
-Japan is the third largest economy and among the most developed countries in the world.  A key factor in studying greenhouse gas emissions in Japan is to look at its energy system. Japan has a unique energy mix because of its lack of natural resources. The oil shocks in the 1970s led Japan towards energy self-sufficiency and nuclear energy was championed to provide a large portion of domestic energy needs, but with the Tohoku earthquake damaging the Fukushima nuclear power plant and its aftermath have left the country's energy future uncertain.
+Japan is the third largest economy and among the most developed countries in the world. A key factor in studying greenhouse gas emissions in Japan is to look at its energy system. Japan has a unique energy mix because of its lack of natural resources. The oil shocks in the 1970s led Japan towards energy self-sufficiency and nuclear energy was championed to provide a large portion of domestic energy needs, but with the Tohoku earthquake damaging the Fukushima Daiichi Nuclear Power Plant and its aftermath have left the country’s energy future uncertain.
 
-Tokyo is a major global city and economic center of Japan. The most commonly used administrative boundaries are the Greater Tokyo area comprising the Tokyo Metropolis, Chiba, Saitama, Kanagawa, Yamanashi, Gunma, Tochigi, and Ibaraki prefectures, the Kanto Major metropolitan area includes the Tokyo Metropolis, Chiba, Saitama, and Kanagawa prefectures, and lastly the Tokyo Metropolis which includes the 23 special wards, Tama area, and the Izu and Ogasawara island groups. The study focuses on the Tokyo Metropolis area also referred to as the Tokyo Metropolitan Government (TMG), the central governing body.
+Tokyo is a major global city and economic center of Japan. The most commonly used administrative boundaries are the Greater Tokyo area comprising the Tokyo Metropolis, Chiba, Saitama, Kanagawa, Yamanashi, Gunma, Tochigi, and Ibaraki prefectures; the Kanto Major metropolitan area includes the Tokyo Metropolis, Chiba, Saitama, and Kanagawa prefectures; and lastly the Tokyo Metropolis which includes the 23 special wards, Tama area, and the Izu and Ogasawara island groups. The study focuses on the Tokyo Metropolis area also referred to as the Tokyo Metropolitan Government (TMG), the central governing body.
 
-<br> 
 ```{r tokyoCarousel}
 # this creates the  image carousel
 # name is for the caption which takes in a vector
@@ -58,14 +58,18 @@ slickR(tokyoImages$uri, height = 'auto') %synch%
 <br>
 <br>
 <br>
-  
+<br>
+ 
+<br>
+<br>
+
 ### Energy Policies
 
 Japanese energy policies were modeled from the Kyoto Protocol in 1997 resulting in the “3Es”, energy security, environmental protection, and economic efficiency and sustainable economic growth. Much like many urbanizing metropolitan area, Tokyo saw growth in energy and emissions from its residential and commercial sectors as transport and industrial sectors decreased. 
 
 ### Natural Disaster Risk
 
-The 2011 Great East Japan earthquake radically altered the Japanese energy system. First, a notable decrease in energy and emissions were recorded as residents were urged to conserve energy in light of electricity shortages. Also, the destruction of the Daiichi Nuclear Power Plant brought the need for reevaluating the safety and necessity of nuclear power programs in Japan. The change in energy mix for the country is a consequential decision as nuclear energy was a proponent in hitting GHG emission reduction targets. 
+The 2011 Great East Japan earthquake radically altered the Japanese energy system. First, a notable decrease in energy and emissions were recorded as residents were urged to conserve energy in light of electricity shortages. Also, the destruction of the Fukushima Daiichi Nuclear Power Plant brought the need for reevaluating the safety and necessity of nuclear power programs in Japan. The change in energy mix for the country is a consequential decision as nuclear energy was a proponent in hitting GHG emission reduction targets
 
 ### Findings
 
