@@ -39,7 +39,7 @@ The equation is the Emissions = Fuel(mass or volume) x fuel heat content(higher 
 
 <br>
 ```{r equation1}
-knitr::include_graphics("https://drive.google.com/uc?export=view&id=1QcZpfE2A6VHCoDUPf7714mJ59yejt4TZ")
+knitr::include_graphics("ISC_APN/figures/bangkok/eq.1.png")
 ```
 <br>
 
@@ -57,7 +57,8 @@ Another finding was that the rate of electricity consumption grew 3% for buildin
 
 bangkokImages <- tibble(name = c("Fig. 1. CO2 emissions from different sectors in BMR (2008- 2016)",
                                 "Fig. 2. Proportion of CO2 emissions by sectors (2016)"),
-                       uri = c("https://drive.google.com/uc?export=view&id=1EWC44-uBqDB13r9UTX8z-bPAXqFt8Gin",                           "https://drive.google.com/uc?export=view&id=1Svs_yhbxXREESxWSMsausPPBXOHa9CaP"))
+                       uri = c("ISC_APN/figures/bangkok/fig1.png",
+                                "ISC_APN/figures/bangkok/fig2.png"))
 
 slickR(
     bangkokImages$uri,

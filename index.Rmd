@@ -15,6 +15,24 @@ source("libraries.R")
 source("data.R")
 ```
 
+<style>
+.float-container {
+    padding: 20px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+}  
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+
 <br>
 <div class="videoContainer">
 <div class="overlay">
@@ -54,12 +72,14 @@ br()
 br()
 h2("About the ISC", style = "text-align:center")
 br()
+ img(class ="center", src = "images/CISC_Logo.png")
+ br()
+        p(class = "blurb",
+          "The Institute for Sustainable Cities at Hunter College emerged from the ideas and goals of Ted Kheel, labor lawyer and nature enthusiast, to enhance New Yorker’s understanding and appreciation for sustainability.")
 p(class = "blurb",
-"The Institute for Sustainable Cities at Hunter College emerged from the ideas and goals of Ted Kheel, labor lawyer and nature enthusiast, to enhance New Yorker’s understanding and appreciation for sustainability.  William D. Solecki was the first Director, who in 2015, returned to his full-time position in the Department of Geography.  Peter J. Marcotullio has been the Director since that time.  The Institute serves a CUNY-wide audience of scholars, students and staff as well as performs research and outreach to local community and government offices.")
-br()
-p(class = "blurb",
-"The Institute for Sustainable Cities at Hunter College (ISC) works to realize cities as part of the solution to sustainability challenges.  By developing innovative science of sustainability research projects, student and public programming events, engagement activities and new curriculum  we promote awareness of opportunities available to urban residents for proactive responses to on-going environmental change.  The institutes ultimate goal is to help generate a new generation of environmental thinkers at Hunter College and within the wider CUNY community that are committed to progressive urban change.  This goal is based on knowledge and understanding of sustainability science, local community needs, decision maker constraints and institutional context.  We promote these goals through four different programmatic areas: Urban Forests, Urban Water, Urban Growth, Energy and Climate Change and Urban Resilience.  
-")  
+"William D. Solecki was the first Director, who in 2015, returned to his full-time position in the Department of Geography.  Peter J. Marcotullio has been the Director since that time.  The Institute serves a CUNY-wide audience of scholars, students and staff as well as performs research and outreach to local community and government offices.")
+
+p(class = "blurb","The Institute for Sustainable Cities at Hunter College (ISC) works to realize cities as part of the solution to sustainability challenges.  By developing innovative science of sustainability research projects, student and public programming events, engagement activities and new curriculum  we promote awareness of opportunities available to urban residents for proactive responses to on-going environmental change.  The institutes ultimate goal is to help generate a new generation of environmental thinkers at Hunter College and within the wider CUNY community that are committed to progressive urban change.  This goal is based on knowledge and understanding of sustainability science, local community needs, decision maker constraints and institutional context.  We promote these goals through four different programmatic areas: Urban Forests, Urban Water, Urban Growth, Energy and Climate Change and Urban Resilience.")  
 ```
 
 ```{r breakImage2}
@@ -74,13 +94,18 @@ br()
 ```{r apnBlurb}
 h2("About the APN", style = "text-align:center")
 br()
-p(class = "blurb",
-a("(APN )", "https://www.apn-gcr.org") ,
+div(class ="float-container",
+    div(class = "float-child",
+        img(src = "images/APN Logo-c-v.png")),
+    div(class = "float-child",
+        p(class = "blurb",
+          a("(APN )", "https://www.apn-gcr.org") ,
 "is an intergovernmental network of 22 countries working towards an 
 Asia-Pacific region that is successfully addressing the challenges of global change and sustainability. 
 The mission of APN is to enable investigations of changes in the Earth’s life support systems and their 
 implications for sustainable development in the Asia-Pacific region through support for research and science-based response 
-strategies and measures, effective linkages between science and policy, and scientific capacity development. ")  
+strategies and measures, effective linkages between science and policy, and scientific capacity development. "))
+)
 ```
 
 
@@ -116,14 +141,15 @@ popup <- paste0( "Country: "
                  , mainMapDF$City
                  , "<br>",
                  "<b><a href='",
-                 paste0(stringr::str_to_lower(mainMapDF$City),".html"),
+                 paste0(stringr::str_to_lower(mainMapDF$City) %>% 
+                            stringr::str_replace_all(pattern = " ", replacement = ""),".html"),
                  "'>Research Page</a></b>"
                )
 ## actual map with the`mainMapDF`
-leaflet(mainMapDF, width = "100%") %>%
+leaflet(data = mainMapDF, width = "100%") %>%
   addProviderTiles(providers$Esri.WorldImagery) %>%
-  addMarkers(popup = ~popup) %>%
-  addMarkers(lat = 34.69838, lng = 135.215418, icon = APNIcon,
+  addCircleMarkers(color = "red",radius = 10, popup = ~popup) %>%
+  addMarkers(lat = 28.69838, lng = 135.215418, icon = APNIcon,
              popup = APNpopup)
 
 ```

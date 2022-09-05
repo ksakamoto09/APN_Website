@@ -49,10 +49,10 @@ nyImages <- tibble(name = c("Fig. 1. Trends in total residential energy use in t
                                  "Fig. 2. Comparison of regression results and U.S. EIA SEDS estimates for residential energy use by state in the tri-state region.",
                             "Fig. 3. Total energy for residential end uses by metropolitan geography.  The center area is the core New York City area (5 boroughs), the first outer area is the inner suburbs and the second outer ring is the outer suburban area.   Each map has different total energy legends given the different levels of energy used for each end use.",
                             "Fig 4. Average household energy uses across the New York City Metropolitan region for 1993 and 2009.  The distributions for each end use were divided into 5 quantiles.  The results therefore demonstrate both the change in intensity over time and differences across geographies."),
-                        uri =c("https://drive.google.com/uc?export=view&id=1BmMkCybVfM76EI07PZYHSdOsf2PJ70Qi",
-                               "https://drive.google.com/uc?export=view&id=1sLusRJKGc2oy1zrfBXfBN_-_LBTTOQjR",
-                               "https://drive.google.com/uc?export=view&id=15ovNqcALD12HhtD7PSe0S8SOqfJYVNqw",
-                               "https://drive.google.com/uc?export=view&id=17Q69T7a5TjdHH-FJdKk0t8Oo17--k4DY"))
+                        uri =c("ISC_APN/figures/NewYork/NYC_Fig1_1.png",
+                               "ISC_APN/figures/NewYork/NYC_Fig2.png",
+                               "ISC_APN/figures/NewYork/NYC_Fig3.png",
+                               "ISC_APN/figures/NewYork/NYC_Fig4.png"))
 slickR(
     nyImages$uri,
     height = 'auto',
@@ -60,17 +60,12 @@ slickR(
   (slickR(nyImages$name, slideType = 'p') + settings(arrows = FALSE)) + 
   settings(dots = TRUE) 
 ```
-
 <br>
 <br>
 <br>
 <br>
-
 <br>
 <br>
-<br>
-<br>
-
 
 ### Findings
 

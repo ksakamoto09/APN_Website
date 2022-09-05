@@ -5,7 +5,7 @@ library(htmltools)
 library(slickR)
 
 # data
-library(googlesheets4)
+library(readxl)
 library(dplyr)
 library(purrr)
 library(stringr)

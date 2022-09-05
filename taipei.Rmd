@@ -49,7 +49,7 @@ considered a global city and one of the most important economic centers in Asia.
 There are 12 administrative districts in Taipei City and 456 neighborhood units. This paper divided the 12 administrative districts into northern, southern, eastern, western, and northeastern sections.  
 
 ```{r taipeiMap, fig.cap="Map of Tapei and Districts", out.width='80%', fig.align='center'}
-knitr::include_graphics("https://drive.google.com/uc?export=view&id=1aHobFpZix_fW1oLOgETZT9uVlIOz0KbE")
+knitr::include_graphics("ISC_APN/figures/taipei/taipei_map1.png")
 ```
 
 <br>
@@ -79,9 +79,9 @@ Emergy synthesis establishes a common energy unit called the solar emjoule to me
 taipeiImages <- tibble(name = c("Fig. 1. The analytic framework of this research.",
                                 "Fig. 2. Emergy system diagram of building construction.",
                                 "Fig. 3. The spatial distribution of five buildings types in Taipei."),
-                       uri = c("https://drive.google.com/uc?export=view&id=1VBTS-1OeOAhgpqczCqBQZiUGBE2vjBHy",
-                               "https://drive.google.com/uc?export=view&id=11NbF3lZy5_fGtgFyZFiksM2aNk5Kyl1W",
-                               "https://drive.google.com/uc?export=view&id=1PAGdGx5wS5tC4JhZOYM-3AQEk6Aaw7Hq"))
+                       uri = c("ISC_APN/figures/taipei/taipei_fig1.png",
+                               "ISC_APN/figures/taipei/taipei_fig2.png",
+                            "ISC_APN/figures/taipei/taipei_fig3.png"))
 
 # slickR takes the tibble and creates an image carousel
 slickR(taipeiImages$uri,height = 'auto') %synch%

@@ -56,10 +56,10 @@ taipeiImages <- tibble(name = c("Fig. 1. Greenhouse gas emissions in the electri
                                 "Fig. 2. Greenhouse gas emissions in the city gas sector in 2017",
                                 "Fig. 3. Current status of population distribution of Seoul in 2017",
                                 "Fig. 4. Space Distribution of Seoul GRDP in 2016 by Ward (Gu)"),
-                       uri = c("https://drive.google.com/uc?export=view&id=1njb1uLLkuyLIUe5HGpktyf0fw14skn0l",
-                               "https://drive.google.com/uc?export=view&id=1Gyx9h5V16enkQbuB4228vnH17hj4qZM8",
-                               "https://drive.google.com/uc?export=view&id=1a-yS93EnvUxzx2ez_0T89wZJ8kNftuSY",
-                               "https://drive.google.com/uc?export=view&id=118Rtf1ceBaEyDeXKkggGSktHXa1VyZbI"))
+                       uri = c("ISC_APN/figures/seoul/fig1.jpeg",
+                               "ISC_APN/figures/seoul/fig2.jpeg",
+                               "ISC_APN/figures/seoul/fig3.jpeg",
+                               "ISC_APN/figures/seoul/fig4.jpeg"))
 
 # slickR takes the tibble and creates an image carousel
 slickR(taipeiImages$uri,height = 'auto') %synch%

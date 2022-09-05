@@ -45,9 +45,9 @@ Tokyo is a major global city and economic center of Japan. The most commonly use
 tokyoImages <- tibble(name = c("Fig. 1. Electricity generation in Japan.",
                                  "Fig. 2. Map of Tokyo across different administrative definitions",
                                  "Fig. 3. GHG emission by gas, sector, and fuel in Tokyo, and electricity emissions factor."),
-                        uri =c("https://drive.google.com/uc?export=view&id=1TLp6lx677Z_R7A3ywY8EahbJmFeyNvEq",
-                               "https://drive.google.com/uc?export=view&id=1VFRH38TJLs5Fv8LwYmavROwAbzyrHXQe",
-                               "https://drive.google.com/uc?export=view&id=1RVdh0-ZoT2KGsYcIl-HJrYcJskdy4Un1"))
+                        uri =c("docs/ISC_APN/figures/tokyo/fig1.png",
+                               "docs/ISC_APN/figures/tokyo/fig2.png",
+                                "docs/ISC_APN/figures/tokyo/fig3.png"))
 slickR(tokyoImages$uri, height = 'auto') %synch%
   (slickR(tokyoImages$name, slideType = 'p') + settings(arrows = FALSE)) + 
   settings(dots = TRUE) 

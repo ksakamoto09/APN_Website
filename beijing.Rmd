@@ -60,8 +60,8 @@ For the residential sector, carbon emissions jumped from 257 MtC in 2002 to 673 
 
 beijingImages <- tibble(name = c("Fig. 1. The Location of the Beijing-Tianjin-Hebei Region.",
                                  "Fig. 2. Decomposition of Indirect Carbon Emission from Residential Consumption for Beijing, Tianjin, and Hebei Sub-regions."),
-                        uri =c("https://drive.google.com/uc?export=view&id=1Q1sGk6WGBTldPOJGTeVqNV-9UgNzsMTg",
-                               "https://drive.google.com/uc?export=view&id=1TyPkObyyqYXCKC1BfWpwierK7O0oSeUP"))
+                        uri =c("ISC_APN/figures/beijing/beijing_fig1.jpeg",
+                               "ISC_APN/figures/beijing/beijing_fig2.png"))
 slickR(
     beijingImages$uri,
     height = 'auto',
@@ -83,7 +83,3 @@ slickR(
 ### Conclusion
 
 This study contributed to the growing literature of carbon emissions in an urban asian context, specifically by breaking down TFCP and CMP for 39 industrial sectors, but also in calculating direct and indirect emissions from residential consumption in the BTH region.  While CO2 emission rose in both industrial and residential sectors, there are some positive findings from the study. For example, TFCP did rise for some areas, and this study also highlights sectors that could be taken into more careful consideration such as the manufacturing of non metallic mineral products, gast and water production, and mining and processing of ferrous metal ores. From a residential perspective, indirect emissions grew the most in the study period. The growth in residential consumption levels is worrying for the future of emission reduction, but the use of consumption structure could be a lever towards taming future emission output.
-
-
-
- 

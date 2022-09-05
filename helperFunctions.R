@@ -25,7 +25,7 @@ cityBio <- function(city, ...){
 memberBio <- function(first, last, authorURL, bioImage, program, programURl, 
                       university,universityURL, city, country, email, bio){
     name <- paste(first, last)
-    siteURL <- paste0(stringr::str_to_lower(city),".html")
+    siteURL <- paste0(stringr::str_to_lower(city) %>% stringr::str_replace_all(pattern = " ", replacement = ""),".html")
     location <- paste0(city, ", ", country)
     div(class="col-md-4",
         a(href="#", `data-featherlight`=paste0("#bio-",stringr::str_remove_all(name, "[^[:alnum:]]")),
